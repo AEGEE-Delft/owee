@@ -1,0 +1,93 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+	title?: string;
+	isHome?: boolean;
+}
+
+const { title: originalTitle, isHome } = Astro.props;
+const title = originalTitle ? `${originalTitle} - AEGEE-Delft` : "AEGEE-Delft";
+const thisYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="w-full h-full">
+		<div class="h-screen">
+			<nav
+			class="bg-aegee-200 text-aegee items-center flex-wrap fixed z-50 left-0 right-0 top-0 foobar transition duration-200 ease-in-out"
+		>
+			<div
+				class="max-w-7xl w-full flex items-center justify-center ml-auto mr-auto"
+			>
+				<div class="">
+					<img class="max-h-24" src="/logo.png" alt="AEGEE-Delft" />
+				</div>
+				<div class="justify-end flex flex-1 items-center">
+					<div class="m-10">
+						<a href="/">Home</a>
+					</div>
+					<div class="m-10">
+						<a href="/about">About</a>
+					</div>
+					<div class="m-10"><a href="/events">Events</a></div>
+					<div class="m-10"><a href="/contact">Contact</a></div>
+				</div>
+			</div>
+		</nav>
+		<!-- {
+			isHome && (
+				<header>
+					<a href="/" />
+				</header>
+			)
+		} -->
+
+		<img
+			class="w-full h-full block object-cover relative -z-50"
+			id="logo-thing"
+			src="https://aegee-delft.nl/wp-content/uploads/2023/11/owee.jpg"
+		/>
+		</div>
+
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<p class="font-aegee">&copy; {thisYear} AEGEE-Delft</p>
+		</footer>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			.foobar {
+				background-color: transparent;
+				backdrop-filter: saturate(123%) blur(8px);
+			}
+		</style>
+		<script>
+			const navElement = document.querySelector("nav");
+			const logoElement = document.querySelector("#logo-thing");
+
+			document.onscroll = () => {
+				logoElement?.setAttribute("style", `top: ${window.scrollY}px`);
+				if (window.scrollY > 0) {
+					navElement?.classList.remove("foobar");
+				} else {
+					navElement?.classList.add("foobar");
+				}
+			};
+		</script>
+	</body>
+</html>
