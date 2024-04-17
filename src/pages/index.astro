@@ -1,18 +1,13 @@
 ---
+import Header from "../components/Header.astro";
+
 const thisYear = new Date().getFullYear();
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<title>AEGEE-Delft</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap"
-			rel="stylesheet"
-		/>
+		<Header />
 	</head>
 	<body class="w-full h-full">
 		<div class="h-screen">
@@ -55,125 +50,154 @@ const thisYear = new Date().getFullYear();
 				src="https://aegee-delft.nl/wp-content/uploads/2023/11/owee.jpg"
 			/>
 		</div>
-		<div class="absolute left-0 right-0 top-0 flex items-center justify-center bg-header shadow-xl w-full h-full">
+		<div
+			class="absolute left-0 right-0 top-0 flex items-center justify-center bg-header shadow-xl w-full h-full"
+		>
 			<div class="text-white">
-				<h1 class="text-5xl font-aegee">Verrijk je studententijd bij AEGEE!</h1>
-				<p class="text-2xl">Verbreed je horizon! (of whatever de tagline was)</p>
+				<h1 class="text-5xl font-aegee">
+					Verrijk je studententijd bij AEGEE!
+				</h1>
+				<p class="text-2xl">
+					Verbreed je horizon! (of whatever de tagline was)
+				</p>
 				<div class="flex justify-start items-center mt-5">
 					<div>
-						<a class="px-5 py-3 block bg-blue-900 text-xl mr-5 rounded-lg">Meer Info</a>
+						<a
+							class="px-5 py-3 block bg-blue-900 text-xl mr-5 rounded-lg"
+							>Meer Info</a
+						>
 					</div>
 					<div>
-						<a class="px-5 py-3 block bg-aegee text-xl rounded-lg">Inschrijven</a>
+						<a class="px-5 py-3 block bg-aegee text-xl rounded-lg"
+							>Inschrijven</a
+						>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<main id="foobar" class="bg-white w-full flex justify-center p-20 flex-col items-center">
+		<main
+			id="foobar"
+			class="bg-white w-full flex justify-center p-20 flex-col items-center"
+		>
 			<div class="max-w-7xl pt-28">
 				<h1 class="text-4xl font-bold">About AEGEE-Delft</h1>
-				<p>Aperiam facere eos qui porro dolor. Rerum
-					animi quibusdam harum illo aperiam laborum qui magnam. Aperiam
-					consequatur ut sit ipsum molestias ut. Eaque itaque eius quae
-					numquam dolores atque deserunt. Id sint quia maiores provident
-					itaque quibusdam asperiores quo. Est magni sed consequuntur et.
-					Ab dignissimos aut nihil est. Quasi omnis reprehenderit
-					repudiandae velit ipsum. Cupiditate voluptas vitae et ut. Rerum
-					sit harum non laudantium odit. Iste quos et omnis. Deserunt
-					fugit minima hic a. Ea doloribus illum sint est quibusdam aut.
-					Aliquid eos qui enim nobis. Voluptatum dolores numquam quis
-					mollitia sint similique est est. Maiores consequatur ut ut
-					laboriosam molestiae repellendus nisi quam. Sed laudantium
-					exercitationem quia omnis. Corrupti eaque sunt at ipsa sed porro
-					delectus. Unde qui reiciendis ullam expedita veniam modi in.
-					Illo inventore quibusdam ipsam vel iure rerum. Minima velit
-					velit quia sit animi enim. Expedita dolorem et autem molestiae
-					beatae. Ea mollitia sunt reprehenderit.</p>
+				<p>
+					Aperiam facere eos qui porro dolor. Rerum animi quibusdam
+					harum illo aperiam laborum qui magnam. Aperiam consequatur
+					ut sit ipsum molestias ut. Eaque itaque eius quae numquam
+					dolores atque deserunt. Id sint quia maiores provident
+					itaque quibusdam asperiores quo. Est magni sed consequuntur
+					et. Ab dignissimos aut nihil est. Quasi omnis reprehenderit
+					repudiandae velit ipsum. Cupiditate voluptas vitae et ut.
+					Rerum sit harum non laudantium odit. Iste quos et omnis.
+					Deserunt fugit minima hic a. Ea doloribus illum sint est
+					quibusdam aut. Aliquid eos qui enim nobis. Voluptatum
+					dolores numquam quis mollitia sint similique est est.
+					Maiores consequatur ut ut laboriosam molestiae repellendus
+					nisi quam. Sed laudantium exercitationem quia omnis.
+					Corrupti eaque sunt at ipsa sed porro delectus. Unde qui
+					reiciendis ullam expedita veniam modi in. Illo inventore
+					quibusdam ipsam vel iure rerum. Minima velit velit quia sit
+					animi enim. Expedita dolorem et autem molestiae beatae. Ea
+					mollitia sunt reprehenderit.
+				</p>
 			</div>
 
 			<div class="max-w-7xl pt-28">
 				<h1 class="text-4xl font-bold">About AEGEE-Delft</h1>
-				<p>Aperiam facere eos qui porro dolor. Rerum
-					animi quibusdam harum illo aperiam laborum qui magnam. Aperiam
-					consequatur ut sit ipsum molestias ut. Eaque itaque eius quae
-					numquam dolores atque deserunt. Id sint quia maiores provident
-					itaque quibusdam asperiores quo. Est magni sed consequuntur et.
-					Ab dignissimos aut nihil est. Quasi omnis reprehenderit
-					repudiandae velit ipsum. Cupiditate voluptas vitae et ut. Rerum
-					sit harum non laudantium odit. Iste quos et omnis. Deserunt
-					fugit minima hic a. Ea doloribus illum sint est quibusdam aut.
-					Aliquid eos qui enim nobis. Voluptatum dolores numquam quis
-					mollitia sint similique est est. Maiores consequatur ut ut
-					laboriosam molestiae repellendus nisi quam. Sed laudantium
-					exercitationem quia omnis. Corrupti eaque sunt at ipsa sed porro
-					delectus. Unde qui reiciendis ullam expedita veniam modi in.
-					Illo inventore quibusdam ipsam vel iure rerum. Minima velit
-					velit quia sit animi enim. Expedita dolorem et autem molestiae
-					beatae. Ea mollitia sunt reprehenderit.</p>
+				<p>
+					Aperiam facere eos qui porro dolor. Rerum animi quibusdam
+					harum illo aperiam laborum qui magnam. Aperiam consequatur
+					ut sit ipsum molestias ut. Eaque itaque eius quae numquam
+					dolores atque deserunt. Id sint quia maiores provident
+					itaque quibusdam asperiores quo. Est magni sed consequuntur
+					et. Ab dignissimos aut nihil est. Quasi omnis reprehenderit
+					repudiandae velit ipsum. Cupiditate voluptas vitae et ut.
+					Rerum sit harum non laudantium odit. Iste quos et omnis.
+					Deserunt fugit minima hic a. Ea doloribus illum sint est
+					quibusdam aut. Aliquid eos qui enim nobis. Voluptatum
+					dolores numquam quis mollitia sint similique est est.
+					Maiores consequatur ut ut laboriosam molestiae repellendus
+					nisi quam. Sed laudantium exercitationem quia omnis.
+					Corrupti eaque sunt at ipsa sed porro delectus. Unde qui
+					reiciendis ullam expedita veniam modi in. Illo inventore
+					quibusdam ipsam vel iure rerum. Minima velit velit quia sit
+					animi enim. Expedita dolorem et autem molestiae beatae. Ea
+					mollitia sunt reprehenderit.
+				</p>
 			</div>
 
 			<div class="max-w-7xl pt-28">
 				<h1 class="text-4xl font-bold">About AEGEE-Delft</h1>
-				<p>Aperiam facere eos qui porro dolor. Rerum
-					animi quibusdam harum illo aperiam laborum qui magnam. Aperiam
-					consequatur ut sit ipsum molestias ut. Eaque itaque eius quae
-					numquam dolores atque deserunt. Id sint quia maiores provident
-					itaque quibusdam asperiores quo. Est magni sed consequuntur et.
-					Ab dignissimos aut nihil est. Quasi omnis reprehenderit
-					repudiandae velit ipsum. Cupiditate voluptas vitae et ut. Rerum
-					sit harum non laudantium odit. Iste quos et omnis. Deserunt
-					fugit minima hic a. Ea doloribus illum sint est quibusdam aut.
-					Aliquid eos qui enim nobis. Voluptatum dolores numquam quis
-					mollitia sint similique est est. Maiores consequatur ut ut
-					laboriosam molestiae repellendus nisi quam. Sed laudantium
-					exercitationem quia omnis. Corrupti eaque sunt at ipsa sed porro
-					delectus. Unde qui reiciendis ullam expedita veniam modi in.
-					Illo inventore quibusdam ipsam vel iure rerum. Minima velit
-					velit quia sit animi enim. Expedita dolorem et autem molestiae
-					beatae. Ea mollitia sunt reprehenderit.</p>
+				<p>
+					Aperiam facere eos qui porro dolor. Rerum animi quibusdam
+					harum illo aperiam laborum qui magnam. Aperiam consequatur
+					ut sit ipsum molestias ut. Eaque itaque eius quae numquam
+					dolores atque deserunt. Id sint quia maiores provident
+					itaque quibusdam asperiores quo. Est magni sed consequuntur
+					et. Ab dignissimos aut nihil est. Quasi omnis reprehenderit
+					repudiandae velit ipsum. Cupiditate voluptas vitae et ut.
+					Rerum sit harum non laudantium odit. Iste quos et omnis.
+					Deserunt fugit minima hic a. Ea doloribus illum sint est
+					quibusdam aut. Aliquid eos qui enim nobis. Voluptatum
+					dolores numquam quis mollitia sint similique est est.
+					Maiores consequatur ut ut laboriosam molestiae repellendus
+					nisi quam. Sed laudantium exercitationem quia omnis.
+					Corrupti eaque sunt at ipsa sed porro delectus. Unde qui
+					reiciendis ullam expedita veniam modi in. Illo inventore
+					quibusdam ipsam vel iure rerum. Minima velit velit quia sit
+					animi enim. Expedita dolorem et autem molestiae beatae. Ea
+					mollitia sunt reprehenderit.
+				</p>
 			</div>
 
 			<div class="max-w-7xl pt-28">
 				<h1 class="text-4xl font-bold">About AEGEE-Delft</h1>
-				<p>Aperiam facere eos qui porro dolor. Rerum
-					animi quibusdam harum illo aperiam laborum qui magnam. Aperiam
-					consequatur ut sit ipsum molestias ut. Eaque itaque eius quae
-					numquam dolores atque deserunt. Id sint quia maiores provident
-					itaque quibusdam asperiores quo. Est magni sed consequuntur et.
-					Ab dignissimos aut nihil est. Quasi omnis reprehenderit
-					repudiandae velit ipsum. Cupiditate voluptas vitae et ut. Rerum
-					sit harum non laudantium odit. Iste quos et omnis. Deserunt
-					fugit minima hic a. Ea doloribus illum sint est quibusdam aut.
-					Aliquid eos qui enim nobis. Voluptatum dolores numquam quis
-					mollitia sint similique est est. Maiores consequatur ut ut
-					laboriosam molestiae repellendus nisi quam. Sed laudantium
-					exercitationem quia omnis. Corrupti eaque sunt at ipsa sed porro
-					delectus. Unde qui reiciendis ullam expedita veniam modi in.
-					Illo inventore quibusdam ipsam vel iure rerum. Minima velit
-					velit quia sit animi enim. Expedita dolorem et autem molestiae
-					beatae. Ea mollitia sunt reprehenderit.</p>
+				<p>
+					Aperiam facere eos qui porro dolor. Rerum animi quibusdam
+					harum illo aperiam laborum qui magnam. Aperiam consequatur
+					ut sit ipsum molestias ut. Eaque itaque eius quae numquam
+					dolores atque deserunt. Id sint quia maiores provident
+					itaque quibusdam asperiores quo. Est magni sed consequuntur
+					et. Ab dignissimos aut nihil est. Quasi omnis reprehenderit
+					repudiandae velit ipsum. Cupiditate voluptas vitae et ut.
+					Rerum sit harum non laudantium odit. Iste quos et omnis.
+					Deserunt fugit minima hic a. Ea doloribus illum sint est
+					quibusdam aut. Aliquid eos qui enim nobis. Voluptatum
+					dolores numquam quis mollitia sint similique est est.
+					Maiores consequatur ut ut laboriosam molestiae repellendus
+					nisi quam. Sed laudantium exercitationem quia omnis.
+					Corrupti eaque sunt at ipsa sed porro delectus. Unde qui
+					reiciendis ullam expedita veniam modi in. Illo inventore
+					quibusdam ipsam vel iure rerum. Minima velit velit quia sit
+					animi enim. Expedita dolorem et autem molestiae beatae. Ea
+					mollitia sunt reprehenderit.
+				</p>
 			</div>
 
 			<div class="max-w-7xl pt-28">
 				<h1 class="text-4xl font-bold">About AEGEE-Delft</h1>
-				<p>Aperiam facere eos qui porro dolor. Rerum
-					animi quibusdam harum illo aperiam laborum qui magnam. Aperiam
-					consequatur ut sit ipsum molestias ut. Eaque itaque eius quae
-					numquam dolores atque deserunt. Id sint quia maiores provident
-					itaque quibusdam asperiores quo. Est magni sed consequuntur et.
-					Ab dignissimos aut nihil est. Quasi omnis reprehenderit
-					repudiandae velit ipsum. Cupiditate voluptas vitae et ut. Rerum
-					sit harum non laudantium odit. Iste quos et omnis. Deserunt
-					fugit minima hic a. Ea doloribus illum sint est quibusdam aut.
-					Aliquid eos qui enim nobis. Voluptatum dolores numquam quis
-					mollitia sint similique est est. Maiores consequatur ut ut
-					laboriosam molestiae repellendus nisi quam. Sed laudantium
-					exercitationem quia omnis. Corrupti eaque sunt at ipsa sed porro
-					delectus. Unde qui reiciendis ullam expedita veniam modi in.
-					Illo inventore quibusdam ipsam vel iure rerum. Minima velit
-					velit quia sit animi enim. Expedita dolorem et autem molestiae
-					beatae. Ea mollitia sunt reprehenderit.</p>
+				<p>
+					Aperiam facere eos qui porro dolor. Rerum animi quibusdam
+					harum illo aperiam laborum qui magnam. Aperiam consequatur
+					ut sit ipsum molestias ut. Eaque itaque eius quae numquam
+					dolores atque deserunt. Id sint quia maiores provident
+					itaque quibusdam asperiores quo. Est magni sed consequuntur
+					et. Ab dignissimos aut nihil est. Quasi omnis reprehenderit
+					repudiandae velit ipsum. Cupiditate voluptas vitae et ut.
+					Rerum sit harum non laudantium odit. Iste quos et omnis.
+					Deserunt fugit minima hic a. Ea doloribus illum sint est
+					quibusdam aut. Aliquid eos qui enim nobis. Voluptatum
+					dolores numquam quis mollitia sint similique est est.
+					Maiores consequatur ut ut laboriosam molestiae repellendus
+					nisi quam. Sed laudantium exercitationem quia omnis.
+					Corrupti eaque sunt at ipsa sed porro delectus. Unde qui
+					reiciendis ullam expedita veniam modi in. Illo inventore
+					quibusdam ipsam vel iure rerum. Minima velit velit quia sit
+					animi enim. Expedita dolorem et autem molestiae beatae. Ea
+					mollitia sunt reprehenderit.
+				</p>
 			</div>
 		</main>
 		<footer>
