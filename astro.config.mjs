@@ -7,5 +7,6 @@ export default defineConfig({
     prefetch: {
         prefetchAll: true
     },
-    integrations: [tailwind()]
+    integrations: [tailwind()],
+    site: 'https://owee24.aegee-delft.nl',
 });
