@@ -1,5 +1,9 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import BaseFooter from "../components/BaseFooter.astro";
+import BaseHead from "../components/BaseHead.astro";
+import "@fontsource/open-sans";
+import NavHeader from "../components/NavHeader.astro";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 
 interface Props {
     title?: string;
@@ -13,5 +17,33 @@ const { title } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <BaseHead title={title} />
+        <ViewTransitions />
+        <style is:global>
+            * {
+                font-family: 'Open Sans Variable', sans-serif;
+            }
+            html,
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            * {
+				box-sizing: border-box;
+			}
+            main {
+                object-fit: cover;
+                margin: 0;
+                padding: 0;
+
+            }
+        </style>
     </head>
+    <body>
+        <NavHeader />
+
+        <main>
+            <slot />
+        </main>
+        <BaseFooter />
+    </body>
 </html>

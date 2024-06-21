@@ -1,0 +1,127 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import bg from "../images/travel.png";
+import ImageTextSection from "../components/ImageTextSection.astro";
+import "@fontsource-variable/newsreader";
+import "@fontsource-variable/newsreader/wght-italic.css";
+---
+
+<BaseLayout title="Travel">
+  <ImageTextSection image={bg} alt="Party" y={1} x={1}>
+    <h1 class="first"><span class="i">Travel</span></h1>
+  </ImageTextSection>
+  <ImageTextSection image={bg} alt="Travel" y={1} x={1} full={true}>
+    <h1 class="first">Our <span class="i">trips</span></h1>
+    <section id="base">
+      <section>
+        <section>
+          <h2>LOCATIONS</h2>
+          <hr />
+          <p>
+            We travel throughout Europe. While traveling we visit not only the
+            big and popular cities but make an effort to visit the smaller
+            unknown places as well.
+          </p>
+        </section>
+        <section>
+          <h2>HITCHHIKING</h2>
+          <hr />
+          <p>
+            In order to make our trips as fun and cheap as possible we always
+            offer hitchhiking as a traveling means. We give courses to support
+            our members doing it and generally encourage it since it is very
+            fun!
+          </p>
+        </section>
+        <section>
+          <h2>AFFORDABLE</h2>
+          <hr />
+          <p>
+            In order to make our trips as inclusive as possible we keep our
+            trips as cheap as possible. The price varies per trip, but they are
+            generally speaking very affordable.
+          </p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>5 - 6 TIMES A YEAR</h2>
+          <hr />
+          <p>
+            We organise around 5 to 6 trips during the year. These vary in
+            length, location and price.
+          </p>
+        </section>
+        <section>
+          <h2>LENGTH</h2>
+          <hr />
+          <p>
+            We organise at least two 10-day trips: during the TU holiday and the
+            summer holiday. We also organise several weekend trips that are a
+            bit shorter.
+          </p>
+        </section>
+        <section>
+          <h2>OTHER AEGEE'S</h2>
+          <hr />
+          <p>
+            When traveling to other countries we always try to visit other
+            AEGEE-locals in Europe. This gives us tours from locals and allows
+            our members to befriend the members.
+          </p>
+        </section>
+      </section>
+    </section>
+  </ImageTextSection>
+</BaseLayout>
+
+<style lang="scss">
+  h1.first {
+    font-size: 9rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-self: flex-start;
+    color: white;
+    font-family: "Newsreader Variable", serif;
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+    .i {
+      font-family: "Newsreader Variable", serif;
+
+      font-style: italic;
+    }
+  }
+
+  #base {
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    & > section {
+      color: white;
+      hr {
+        margin: 0;
+        border: 1px solid white;
+      }
+      display: flex;
+      
+      justify-content: space-evenly;
+      & > section {
+        width: 25%;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        & > section {
+          width: 100%;
+        }
+      }
+    }
+  }
+</style>

@@ -4,16 +4,14 @@ interface Props {
 }
 
 const { title: title2 } = Astro.props;
-const title = title2
-    ? `${title2} - AEGEE-Delft`
-    : "Een avontuur aan de Horizon - AEGEE-Delft";
+const title = `${title2 || "Avontuur aan de Horizon"} - AEGEE-Delft`;
 ---
 
 <title>{title}</title>
 <meta name="author" content="AEGEE-Delft" />
 <meta
     name="description"
-    content="AEGEE-Delft's OWee website! An adventure at the horizon!"
+    content="AEGEE-Delft's OWee website! Adventure at the horizon!"
 />
 
 <meta

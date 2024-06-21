@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import bg from "../images/europe.png";
+import ImageTextSection from "../components/ImageTextSection.astro";
+---
+
+<BaseLayout title="Europe">
+  <ImageTextSection image={bg} alt="Party" y={1} x={2}>
+    <h1 class="first">Europe</h1>
+  </ImageTextSection>
+</BaseLayout>
+
+<style lang="scss">
+  h1.first {
+    font-size: 9rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-self: flex-start;
+    color: white;
+    font-family: "Newsreader Variable", serif;
+    @media (max-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+</style>

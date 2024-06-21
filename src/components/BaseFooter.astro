@@ -1,0 +1,54 @@
+---
+import "@fontsource/bebas-neue";
+import { Image } from "astro:assets";
+import logoWit from "../images/logoWit.svg";
+---
+
+<footer>
+    <div class="switch">
+        <p class="l">AEGEE-Delft</p>
+        <div>
+            <p>Molslaan 104</p>
+            <p>2611RP</p>
+            <p>Delft</p>
+        </div>
+    </div>
+    <div>
+        <Image src={logoWit} alt="AEGEE-Delft logo" width="100" />
+    </div>
+</footer>
+
+<style lang="scss">
+    footer {
+        background-color: #70086e;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        color: white;
+    }
+    div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1vmin;
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .l {
+        font-family: "Bebas Neue", sans-serif;
+        font-size: x-large;
+    }
+    .switch {
+        @media (min-width: 600px) {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+</style>

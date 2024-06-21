@@ -1,7 +1,178 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import "@fontsource/bebas-neue";
+import "@fontsource-variable/newsreader";
+import "@fontsource-variable/newsreader/wght-italic.css";
+import bg from "../images/home.png";
+import logoWit from "../images/logoWit.svg";
+import ImageImageSection from "../components/ImageImageSection.astro";
+import korayinger from "../images/korayinger.jpg";
+import { Image } from "astro:assets";
+import PlanningDay from "../components/PlanningDay.astro";
+import PlanningEvent from "../components/PlanningEvent.astro";
 ---
 
 <BaseLayout>
-  <h1>Welcome to my site!</h1>
+  <ImageImageSection image={bg} alt="Party" logo={logoWit} y={2} />
+  <section id="planning">
+    <table class="flextable">
+      <tbody>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>
+            <h1><span class="i">OWEE</span><br />PLANNING</h1>
+          </td>
+          <td></td>
+        </tr>
+        <PlanningDay day="Zondag" right={false}>
+          <PlanningEvent
+            time="18:00"
+            location="Parade Terrein"
+            title="Parade"
+            imageSource={korayinger}
+          >
+            Onze paarse stoet komt er weer aan en zal iedereen een eerste beeld
+            geven bij wie we zijn.
+          </PlanningEvent>
+        </PlanningDay>
+        <PlanningDay day="Maandag" right={true}>
+          <PlanningEvent
+            time="12:00"
+            location="MARKT PLEIN"
+            title="Infomarkt"
+            imageSource={korayinger}
+            right={true}
+          >
+            Kom lekker met leden praten om een beter beeld te krijgen bij wat we
+            allemaal doen en de sfeer te proeven!
+          </PlanningEvent>
+          <PlanningEvent
+            time="20:00"
+            location="Broeder Lazarus"
+            title="Taste of Europe"
+            imageSource={korayinger}
+            right={false}
+          >
+            Zie AEGEE op een klassieke AEGEE manie: proef verschillende drankjes
+            uit Europa en eet wat interessante snackies.
+          </PlanningEvent>
+          <PlanningEvent
+            time="21:00"
+            location="Broeder Lazarus"
+            title="EUROPARTY"
+            imageSource={korayinger}
+            right={true}
+          >
+            Sluit samen met AEGEE-Delft de tweede OWee dag af op de mooiste
+            Europese feestnummers bij onze Europarty.
+          </PlanningEvent>
+        </PlanningDay>
+        <PlanningDay day="Dinsdag" right={false}>
+          <PlanningEvent
+            time="21:00"
+            location="Broeder Lazarus"
+            title="Pitch Imperfect Karaoke"
+            imageSource={korayinger}
+          >
+            Kom samen met onze leden een leuke karaoke avond vieren. We zullen
+            verschillende nummers zingen en er een mooie avond van maken.
+          </PlanningEvent>
+        </PlanningDay>
+        <PlanningDay day="Woensdag" right={true}>
+          <PlanningEvent
+            time="10:00"
+            location="X"
+            title="Activiteiten Markt"
+            imageSource={korayinger}
+            right={true}
+          >
+            We zullen te vinden zijn op het terrein achter X, daar kun je
+            aangeven waar je naartoe bent geweest deze zomer en lekker met ons
+            babbelen.
+          </PlanningEvent>
+          <PlanningEvent
+            time="21:00"
+            location="Broeder Lazarus"
+            title="Glownight"
+            imageSource={korayinger}
+            right={false}
+          >
+            Samen met de andere Nederlandse AEGEE's gaan we er een mooi
+            afsluitend feest van maken. Geniet van prachtige neon kleuren en
+            goede muziek van verschillende DJ's!
+          </PlanningEvent>
+        </PlanningDay>
+        <PlanningDay day="Donderdag" right={true}>
+          <PlanningEvent
+            time="18:00"
+            location="Tuin achter Kanaalweg 4"
+            title="WELKOM BBQ"
+            right={true}
+            imageSource={korayinger}
+          >
+            Op deze laatste avond is iedereen welkom. Als je lekker wil viben
+            met onze leden op een lowkey niveau onder genot van een heerlijke
+            BBQ is dit de avond om te komen.
+          </PlanningEvent>
+        </PlanningDay>
+      </tbody>
+    </table>
+  </section>
+
+  <style lang="scss">
+    #planning {
+      padding: 1vw;
+      margin: 0;
+      background: linear-gradient(180deg, #e0c1de 33%, #86afdc 100%);
+    }
+    table {
+      width: 100%;
+    }
+    table.flextable {
+      display: flex;
+      flex-direction: column;
+    }
+    table.flextable > thead,
+    table.flextable > tfoot,
+    table.flextable > tbody {
+      display: flex;
+      flex-direction: column;
+    }
+    table.flextable > * > tr {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: white;
+      font-family: "Newsreader Variable", serif;
+      .i {
+        font-family: "Newsreader Variable", serif;
+        font-style: italic;
+      }
+      text-align: left;
+    }
+
+    tr {
+      width: 100%;
+      td:nth-child(1) {
+        width: 35%;
+      }
+      td:nth-child(2) {
+        width: 10%;
+        background-color: white;
+      }
+      td:nth-child(3) {
+        width: 40%;
+        padding-left: 2.5rem;
+      }
+
+      td:nth-child(4) {
+        width: 15%;
+      }
+    }
+  </style>
 </BaseLayout>

@@ -1,0 +1,74 @@
+---
+interface Props {
+    day: string;
+    right: boolean;
+}
+
+const { day, right } = Astro.props;
+
+const startPos = right ? "right" : "left";
+---
+
+<tr class:list={startPos}>
+    <td>
+        <h2>{day}</h2>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<slot />
+
+<style lang="scss">
+    tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        td {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-variant: small-caps;
+        }
+        &.right {
+            td:nth-child(1) {
+                order: 3;
+                width: 40%;
+            }
+            td:nth-child(2) {
+                order: 2;
+                width: 10%;
+            }
+            td:nth-child(3) {
+                order: 1;
+                width: 35%;
+            }
+            td:nth-child(4) {
+                order: 4;
+                width: 15%;
+            }
+        }
+        &.left {
+            td:nth-child(1) {
+                width: 35%;
+            }
+            td:nth-child(2) {
+                width: 10%;
+            }
+            td:nth-child(3) {
+                width: 40%;
+            }
+
+            td:nth-child(4) {
+                width: 15%;
+            }
+        }
+
+        td:nth-child(2) {
+            background-color: white;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+</style>
