@@ -1,0 +1,27 @@
+---
+import ImageImageSection from "../components/ImageImageSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import bg from "../images/home.png";
+import logoWit from "../images/logoWit.svg";
+import ImageTextSection from "../components/ImageTextSection.astro";
+---
+
+<BaseLayout>
+    <ImageTextSection image={bg} alt="Party" y={1} x={2}>
+        <h1 class="first">Hier is niks te vinden... <br><a href="javascript:history.back()">Terug naar de vorige pagina?</a></h1>
+    </ImageTextSection>
+</BaseLayout>
+
+<style lang="scss">
+    .first {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    a {
+        color: white;
+        // text-decoration: none;
+    }
+</style>

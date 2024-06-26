@@ -14,7 +14,7 @@
     "@fontsource-variable/newsreader": "^5.0.19",
     "@fontsource/bebas-neue": "^5.0.20",
     "@fontsource/open-sans": "^5.0.28",
-    "astro": "^4.10.3",
+    "astro": "4.11.1",
     "typescript": "^5.4.5"
   },
   "devDependencies": {

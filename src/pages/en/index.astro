@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import "@fontsource/bebas-neue";
+import "@fontsource-variable/newsreader";
+import "@fontsource-variable/newsreader/wght-italic.css";
+import bg from "../../images/home.png";
+import logoWit from "../../images/logoWit.svg";
+import ImageImageSection from "../../components/ImageImageSection.astro";
+import korayinger from "../../images/korayinger.jpg";
+import { Image } from "astro:assets";
+import PlanningDay from "../../components/PlanningDay.astro";
+import PlanningEvent from "../../components/PlanningEvent.astro";
+---
+
+<BaseLayout>
+    <ImageImageSection image={bg} alt="Party" logo={logoWit} y={2} />
+    <section id="planning">
+        <table class="flextable">
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <h1><span class="i">OWEE</span><br />PLANNING</h1>
+                    </td>
+                    <td></td>
+                </tr>
+                <PlanningDay day="Sunday" right={false}>
+                    <PlanningEvent
+                        time="18:00"
+                        location="Parade Area"
+                        title="Parade"
+                        imageSource={korayinger}
+                    >
+                        Our purple procession is coming again and will give
+                        everyone a first glimpse of who we are.
+                    </PlanningEvent>
+                </PlanningDay>
+                <PlanningDay day="Monday" right={true}>
+                    <PlanningEvent
+                        time="12:00"
+                        location="MARKT PLEIN"
+                        title="Information Market"
+                        imageSource={korayinger}
+                        right={true}
+                    >
+                        Come and chat with members to get a better idea of what
+                        we all do and soak up the atmosphere!
+                    </PlanningEvent>
+                    <PlanningEvent
+                        time="20:00"
+                        location="Broeder Lazarus"
+                        title="Taste of Europe"
+                        imageSource={korayinger}
+                        right={false}
+                    >
+                        See AEGEE in a classic AEGEE way: taste different drinks
+                        from Europe and eat some interesting snacks.
+                    </PlanningEvent>
+                    <PlanningEvent
+                        time="21:00"
+                        location="Broeder Lazarus"
+                        title="EUROPARTY"
+                        imageSource={korayinger}
+                        right={true}
+                    >
+                        Join AEGEE-Delft in closing out the second OWee day to
+                        the finest European party songs at our Europarty!
+                    </PlanningEvent>
+                </PlanningDay>
+                <PlanningDay day="Dinsdag" right={false}>
+                    <PlanningEvent
+                        time="21:00"
+                        location="Broeder Lazarus"
+                        title="Pitch Imperfect Karaoke"
+                        imageSource={korayinger}
+                    >
+                        Join our members for a fun karaoke night! We will sing
+                        different songs and make it a great evening.
+                    </PlanningEvent>
+                </PlanningDay>
+                <PlanningDay day="Woensdag" right={true}>
+                    <PlanningEvent
+                        time="10:00"
+                        location="X"
+                        title="Activity Markt"
+                        imageSource={korayinger}
+                        right={true}
+                    >
+                        We will be found in the grounds behind X, there you can
+                        point out where you've been this summer and have a nice
+                        chat with us.
+                    </PlanningEvent>
+                    <PlanningEvent
+                        time="21:00"
+                        location="Broeder Lazarus"
+                        title="Glownight"
+                        imageSource={korayinger}
+                        right={false}
+                    >
+                        Together with the other Dutch AEGEEs, we are going to
+                        make it a beautiful closing party. Enjoy beautiful neon
+                        colours and good music from different DJs!
+                    </PlanningEvent>
+                </PlanningDay>
+                <PlanningDay day="Donderdag" right={true}>
+                    <PlanningEvent
+                        time="18:00"
+                        location="Garden behind Kanaalweg 4"
+                        title="WELCOME BBQ"
+                        right={true}
+                        imageSource={korayinger}
+                    >
+                        On this last night, everyone is welcome. If you want to
+                        want to vibe with our members on a low-key level while
+                        enjoy a delicious BBQ, this is the night to come.
+                    </PlanningEvent>
+                </PlanningDay>
+            </tbody>
+        </table>
+    </section>
+</BaseLayout>
+
+<style lang="scss">
+    #planning {
+        padding: 1vw;
+        margin: 0;
+        background: linear-gradient(180deg, #e0c1de 33%, #86afdc 100%);
+    }
+    table {
+        width: 100%;
+    }
+    table.flextable {
+        display: flex;
+        flex-direction: column;
+    }
+    table.flextable > thead,
+    table.flextable > tfoot,
+    table.flextable > tbody {
+        display: flex;
+        flex-direction: column;
+    }
+    table.flextable > * > tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    h1 {
+        font-size: 3.5rem;
+        color: white;
+        font-family: "Newsreader Variable", serif;
+        .i {
+            font-family: "Newsreader Variable", serif;
+            font-style: italic;
+        }
+        text-align: left;
+    }
+
+    tr {
+        width: 100%;
+
+        @media (max-width: 768px) {
+            td {
+                width: 100% !important;
+                background-color: initial !important;
+            }
+        }
+
+        td:nth-child(1) {
+            width: 35%;
+        }
+        td:nth-child(2) {
+            width: 10%;
+            background-color: white;
+        }
+        td:nth-child(3) {
+            width: 40%;
+            padding-left: 2.5rem;
+        }
+
+        td:nth-child(4) {
+            width: 15%;
+        }
+    }
+</style>
