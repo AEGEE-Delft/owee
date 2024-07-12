@@ -120,59 +120,67 @@ import PlanningEvent from "../components/PlanningEvent.astro";
       </tbody>
     </table>
   </section>
-
-  <style lang="scss">
-    #planning {
-      padding: 1vw;
-      margin: 0;
-      background: linear-gradient(180deg, #e0c1de 33%, #86afdc 100%);
-    }
-    table {
-      width: 100%;
-    }
-    table.flextable {
-      display: flex;
-      flex-direction: column;
-    }
-    table.flextable > thead,
-    table.flextable > tfoot,
-    table.flextable > tbody {
-      display: flex;
-      flex-direction: column;
-    }
-    table.flextable > * > tr {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-    h1 {
-      font-size: 3.5rem;
-      color: white;
-      font-family: "Newsreader Variable", serif;
-      .i {
-        font-family: "Newsreader Variable", serif;
-        font-style: italic;
-      }
-      text-align: left;
-    }
-
-    tr {
-      width: 100%;
-      td:nth-child(1) {
-        width: 35%;
-      }
-      td:nth-child(2) {
-        width: 10%;
-        background-color: white;
-      }
-      td:nth-child(3) {
-        width: 40%;
-        padding-left: 2.5rem;
-      }
-
-      td:nth-child(4) {
-        width: 15%;
-      }
-    }
-  </style>
 </BaseLayout>
+
+<style lang="scss">
+  #planning {
+    padding: 1vw;
+    margin: 0;
+    background: linear-gradient(180deg, #e0c1de 33%, #86afdc 100%);
+  }
+  table {
+    width: 100%;
+  }
+  table.flextable {
+    display: flex;
+    flex-direction: column;
+  }
+  table.flextable > thead,
+  table.flextable > tfoot,
+  table.flextable > tbody {
+    display: flex;
+    flex-direction: column;
+  }
+  table.flextable > * > tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-family: "Newsreader Variable", serif;
+    .i {
+      font-family: "Newsreader Variable", serif;
+      font-style: italic;
+    }
+    text-align: left;
+  }
+
+  tr {
+    width: 100%;
+
+    @media (max-width: 768px) {
+      td {
+        width: 100% !important;
+        background-color: initial !important;
+      }
+    }
+
+    td:nth-child(1) {
+      width: 35%;
+    }
+    td:nth-child(2) {
+      width: 10%;
+      background-color: white;
+    }
+    td:nth-child(3) {
+      width: 40%;
+      padding-left: 2.5rem;
+    }
+
+    td:nth-child(4) {
+      width: 15%;
+    }
+  }
+</style>
