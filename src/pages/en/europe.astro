@@ -1,0 +1,142 @@
+---
+import "@fontsource-variable/newsreader";
+import { Image } from "astro:assets";
+import ImageTextSection from "../../components/ImageTextSection.astro";
+import europe1 from "../../images/europe_1.png";
+import europe2 from "../../images/europe_2.png";
+import europe3 from "../../images/europe_3.png";
+import bg from "../../images/europe_front.png";
+import euBg from "../../images/europeBg.png";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Europe" bgImages={[bg, euBg]}>
+  <ImageTextSection image={bg} classNames={["fixUrself"]}>
+    <h1 class="first">Europe</h1>
+  </ImageTextSection>
+  <ImageTextSection image={euBg}>
+    <section>
+      <section id="top">
+        <section>
+          <p>161 CITIES</p>
+          <p>40 COUNTRIES</p>
+          <p>13000 MEMBERS</p>
+        </section>
+        <p id="left">
+          AEGEE is one of Europe's biggest interdisciplinary student
+          organisations, striving for a democratic, diverse and borderless
+          Europe. AEGEE strengthens mutual understanding and brings Europe
+          closer to young people.
+        </p>
+      </section>
+      <section id="bottom">
+        <section class="item">
+          <h1>AGORA & EPM</h1>
+          <Image src={europe1} alt="AGORA & EPM" />
+          <p>
+            Three times a year all AEGEE-locals come together somewhere in
+            Europe for a week to discuss how things are going, make future plans
+            and, ofcourse, party every night. Not only is it very fun, you make
+            a lot of friends throughout all Europe this way.
+          </p>
+        </section>
+        <section class="item">
+          <h1>SUMMER UNIVERSITIES</h1>
+          <Image src={europe2} alt="Summer Universities" />
+          <p>
+            No, summer universities are not boring and do not contain studying.
+            They are an exchange program where you travel somewhere for a week
+            and meet all kinds of AEGEE members. There are all kinds of SU’s
+            ranging from historical tours throuh countries to hikes across
+            mountains to drinking holidays.
+          </p>
+        </section>
+        <section class="item">
+          <h1>AEGEE-PASSAU</h1>
+          <Image src={europe3} alt="AEGEE-Passau" />
+          <p>
+            AEGEE-Passau is an AEGEE local on the Germany-Austria border. They
+            are very special to us since they are our twin-local. This means
+            that they attend our christmas dinner and we attend their boat
+            party. We have very close relations to them and we love visting them
+            and having them visit us.
+          </p>
+        </section>
+      </section>
+    </section>
+  </ImageTextSection>
+
+  <style lang="scss">
+    h1.first {
+      font-size: 9rem;
+      margin: 0;
+      text-align: right;
+      color: white;
+      font-family: "Newsreader Variable", serif;
+      padding-top: 67vh;
+      padding-right: 4vw;
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
+    }
+
+    .fixUrself {
+      @media (max-width: 768px) {
+        background-position-x: -50vw;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+
+    .item {
+      padding: 1rem;
+      color: rgba(255, 255, 255, 0.75);
+
+      @media (min-width: 768px) {
+        width: 30%;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+
+    #bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    #top {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+
+      p {
+        margin: 0;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      #left {
+        border-top: 2px solid rgba(255, 255, 255, 0.65);
+      }
+    }
+  </style>
+</BaseLayout>

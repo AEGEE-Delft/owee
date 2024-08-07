@@ -1,0 +1,110 @@
+---
+import "@fontsource-variable/newsreader/opsz-italic.css";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Info">
+    <section id="root">
+        <h1 class="first">Info</h1>
+        <section id="base">
+            <section class="row">
+                <section class="item">
+                    <h2>What does AEGEE do?</h2>
+                    <p>Traveling, socializing, all around "gezelligheid"!</p>
+                </section>
+                <section class="item">
+                    <h2>How much does it cost?</h2>
+                    <p>50 euro per year!</p>
+                </section>
+                <section class="item">
+                    <h2>What does that get me?</h2>
+                    <p>Friends for life!</p>
+                </section>
+            </section>
+            <section class="row">
+                <section class="item">
+                    <h2>What kinds of activities do you have?</h2>
+                    <p>
+                        Trips, get-togethers, and lots of committee activities!
+                    </p>
+                </section>
+                <section class="item">
+                    <h2>Where to register?</h2>
+                    <p>
+                        On the registration page! Click <a
+                            href="https://aegee-delft.nl/lid-worden">here</a
+                        >!
+                    </p>
+                </section>
+                <section class="item">
+                    <h2>Do you also have committees?</h2>
+                    <p>
+                        Yes! Everything from bartending at social drinks to
+                        trips can be organised with us!
+                    </p>
+                </section>
+            </section>
+        </section>
+    </section>
+</BaseLayout>
+
+<style lang="scss">
+    h1.first {
+        font-size: 9rem;
+        padding-top: 10rem;
+        @media (min-width: 768px) {
+            padding: 10rem 0 0 30rem;
+        }
+        width: 100%;
+        align-self: flex-start;
+        color: white;
+        font-family: "Newsreader Variable", serif;
+        @media (max-width: 768px) {
+            font-size: 3rem;
+        }
+    }
+
+    #base {
+        display: flex;
+        flex-direction: column;
+
+        flex-wrap: wrap;
+        & > section {
+            color: white;
+
+            display: flex;
+
+            justify-content: space-evenly;
+            hr {
+                margin: 0;
+                border: 1px solid white;
+            }
+            & > section {
+                width: 25%;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+                a {
+                    // color: white;
+                    color: purple;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+                & > section {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #root {
+        padding: 1rem;
+    }
+</style>

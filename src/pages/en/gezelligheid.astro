@@ -1,0 +1,98 @@
+---
+import "@fontsource-variable/newsreader";
+import { Image } from "astro:assets";
+import ImageTextSection from "../../components/ImageTextSection.astro";
+import gezellig1 from "../../images/gezelligheid_1.png";
+import gezellig2 from "../../images/gezelligheid_2.png";
+import gezellig3 from "../../images/gezelligheid_3.png";
+import bg from "../../images/gezelligheid_front.png";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Gezelligheid">
+  <ImageTextSection image={bg} classNames={["fixUrself"]}>
+    <h1 class="first">Gezelligheid</h1>
+  </ImageTextSection>
+  <section id="dingen">
+    <section class="fotodingen">
+      <Image src={gezellig1} alt="Social Drink" />
+      <h1>SOCIAL DRINK</h1>
+      <hr />
+      <p>
+        Every Wednesday we have a social drink with an optional dinner. These have themes, fun games and, ofcourse, some nice drinks to enjoy. 
+      </p>
+    </section>
+    <section class="fotodingen">
+      <Image src={gezellig2} alt="Activities" />
+      <h1>ACTIVITIES</h1>
+      <hr />
+      <p>
+        Every week there are some fun activities which range from movie nights to wine tastings. These are organised by committees, the board and members. 
+      </p>
+    </section>
+    <section class="fotodingen">
+      <Image src={gezellig3} alt="Parties" />
+      <h1>PARTIES</h1>
+      <hr />
+      <p>
+        We also organise parties throughout the year and travel through the Netherlands to attend ones organised by other AEGEE locals.
+      </p>
+    </section>
+  </section>
+</BaseLayout>
+
+<style lang="scss">
+  h1.first {
+    font-size: 8.5rem;
+    color: white;
+    font-family: "Newsreader Variable", serif;
+    margin: 0;
+    padding-top: 80vh;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      font-size: 4rem;
+      padding-top: 70vh;
+      text-align: center;
+    }
+  }
+
+  #dingen {
+    padding-top: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    hr {
+      margin: 0;
+      border: 1px solid white;
+    }
+
+    .fotodingen {
+      padding: 1rem;
+      text-align: center;
+      @media (min-width: 768px) {
+        width: 30%;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .fixUrself {
+    background-position-x: right;
+  }
+</style>
