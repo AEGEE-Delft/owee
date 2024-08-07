@@ -1,10 +1,25 @@
 ---
+interface Props {
+    bgImages: ImageMetadata[];
+}
+
 import "@fontsource/bebas-neue";
 import { Image } from "astro:assets";
 import logoWit from "../images/logoWit.svg";
+
+const { bgImages } = Astro.props;
+
+const shouldUse = bgImages.length > 0;
+
+function calcHeight(img: ImageMetadata): number {
+    return (img.height / img.width) * 1650;
+}
+
+const height = bgImages.map(calcHeight).reduce((a, b) => a + b, 0);
+const pos = `${height}px`;
 ---
 
-<footer>
+<footer id="bottom" class:list={[{ use: shouldUse }]}>
     <div class="switch">
         <p class="l">AEGEE-Delft</p>
         <div>
@@ -18,7 +33,7 @@ import logoWit from "../images/logoWit.svg";
     </div>
 </footer>
 
-<style lang="scss">
+<style lang="scss" define:vars={{ pos }}>
     footer {
         background-color: #70086e;
         margin: 0;
@@ -27,6 +42,7 @@ import logoWit from "../images/logoWit.svg";
         height: fit-content;
         display: flex;
         color: white;
+        justify-content: space-around;
     }
     div {
         flex: 1;
@@ -46,13 +62,6 @@ import logoWit from "../images/logoWit.svg";
         font-size: x-large;
     }
     .switch {
-        @media (min-width: 600px) {
-            flex-direction: row;
-            justify-content: space-around;
-        }
+        padding: 1vmin;
     }
 </style>
-
-<script>
-    window.location.replace("https://aegee-delft.nl/")
-</script>

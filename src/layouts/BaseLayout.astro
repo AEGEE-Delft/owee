@@ -4,14 +4,14 @@ import BaseHead from "../components/BaseHead.astro";
 import "@fontsource/open-sans";
 import NavHeader from "../components/NavHeader.astro";
 import ViewTransitions from "astro/components/ViewTransitions.astro";
-
-
+import type { ImageMetadata } from "astro";
 
 interface Props {
     title?: string;
+    bgImages?: ImageMetadata[];
 }
 
-const { title } = Astro.props;
+const { title, bgImages = [] } = Astro.props;
 ---
 
 <html lang="en">
@@ -20,26 +20,44 @@ const { title } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <BaseHead title={title} />
         <ViewTransitions />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+            rel="stylesheet"
+        />
         <style is:global>
             * {
-                font-family: 'Open Sans Variable', sans-serif;
+                font-family: "Open Sans Variable", sans-serif;
             }
             html,
             body {
                 padding: 0;
                 margin: 0;
+                min-height: 100%;
             }
             html {
                 width: 100%;
+                background: rgb(34, 193, 195);
+                background: linear-gradient(
+                    180deg,
+                    rgba(34, 193, 195, 1) 0%,
+                    rgba(253, 187, 45, 1) 100%
+                );
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 100vh;
             }
             * {
-				box-sizing: border-box;
-			}
+                box-sizing: border-box;
+            }
             main {
                 object-fit: cover;
                 margin: 0;
                 padding: 0;
-
             }
         </style>
     </head>
@@ -48,6 +66,6 @@ const { title } = Astro.props;
         <main>
             <slot />
         </main>
-        <BaseFooter />
+        <BaseFooter bgImages={bgImages} />
     </body>
 </html>

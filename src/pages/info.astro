@@ -1,14 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import bg from "../images/gezelligheid.png";
+import "@fontsource-variable/newsreader/opsz-italic.css";
 import ImageTextSection from "../components/ImageTextSection.astro";
 ---
 
 <BaseLayout title="Info">
-    <ImageTextSection image={bg} alt="Party" y={2} x={1}>
-        <h1 class="first">Info</h1>
-    </ImageTextSection>
-    <ImageTextSection image={bg} alt="Party" full={true}>
+    <section id="root">
         <h1 class="first">Info</h1>
         <section id="base">
             <section class="row">
@@ -33,9 +30,8 @@ import ImageTextSection from "../components/ImageTextSection.astro";
                 <section class="item">
                     <h2>Waar kan ik me inschrijven?</h2>
                     <p>
-                        Op de <a href="https://aegee-delft.nl/lid-worden"
-                            >inschrijf pagina</a
-                        >!
+                        Op de inschrijf pagina! Klik <a
+                            href="https://aegee-delft.nl/lid-worden">hier</a>!
                     </p>
                 </section>
                 <section class="item">
@@ -47,76 +43,22 @@ import ImageTextSection from "../components/ImageTextSection.astro";
                 </section>
             </section>
         </section>
-    </ImageTextSection>
+    </section>
 </BaseLayout>
 
 <style lang="scss">
     h1.first {
         font-size: 9rem;
-        margin: 0;
-        padding: 0;
+        padding-top: 10rem;
+        @media (min-width: 768px) {
+            padding: 10rem 0 0 30rem;
+        }
         width: 100%;
         align-self: flex-start;
         color: white;
         font-family: "Newsreader Variable", serif;
         @media (max-width: 768px) {
             font-size: 3rem;
-        }
-    }
-
-    // #base {
-    //     // background-color: #c44bc2;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     padding: 2rem;
-    //     margin: 0;
-    //     width: 100%;
-    // }
-
-    // .row {
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-evenly;
-    //     align-items: center;
-    //     width: 100%;
-    //     margin: 0;
-    //     padding: 0;
-    // }
-    // .item {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     margin: 0;
-    //     padding: 0;
-    //     width: 30%;
-    //     a {
-    //         // color: white;
-    //         color: inherit;
-    //         text-decoration: none;
-    //         &:hover {
-    //             text-decoration: underline;
-    //         }
-    //     }
-    // }
-
-    h1.first {
-        font-size: 9rem;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        align-self: flex-start;
-        color: white;
-        font-family: "Newsreader Variable", serif;
-        @media (max-width: 768px) {
-            font-size: 3rem;
-        }
-        .i {
-            font-family: "Newsreader Variable", serif;
-
-            font-style: italic;
         }
     }
 
@@ -127,13 +69,14 @@ import ImageTextSection from "../components/ImageTextSection.astro";
         flex-wrap: wrap;
         & > section {
             color: white;
+
+            display: flex;
+
+            justify-content: space-evenly;
             hr {
                 margin: 0;
                 border: 1px solid white;
             }
-            display: flex;
-
-            justify-content: space-evenly;
             & > section {
                 width: 25%;
                 @media (max-width: 768px) {
@@ -141,7 +84,7 @@ import ImageTextSection from "../components/ImageTextSection.astro";
                 }
                 a {
                     // color: white;
-                    color: inherit;
+                    color: purple;
                     text-decoration: none;
                     &:hover {
                         text-decoration: underline;
@@ -151,10 +94,15 @@ import ImageTextSection from "../components/ImageTextSection.astro";
 
             @media (max-width: 768px) {
                 flex-direction: column;
+                align-items: center;
                 & > section {
                     width: 100%;
                 }
             }
         }
+    }
+
+    #root {
+        padding: 1rem;
     }
 </style>

@@ -1,27 +1,143 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import bg from "../images/europe_front.png";
 import { Image } from "astro:assets";
-import bg from "../images/europe.png";
 import ImageTextSection from "../components/ImageTextSection.astro";
+import euBg from "../images/europeBg.png";
+import "@fontsource-variable/newsreader";
+import europe1 from "../images/europe_1.png";
+import europe2 from "../images/europe_2.png";
+import europe3 from "../images/europe_3.png";
 ---
 
-<BaseLayout title="Europe">
-  <ImageTextSection image={bg} alt="Party" y={1} x={2}>
+<BaseLayout title="Europe" bgImages={[bg, euBg]}>
+  <ImageTextSection image={bg} classNames={["fixUrself"]}>
     <h1 class="first">Europe</h1>
   </ImageTextSection>
-</BaseLayout>
+  <ImageTextSection image={euBg}>
+    <section>
+      <section id="top">
+        <section>
+          <p>161 STEDEN</p>
+          <p>40 LANDEN</p>
+          <p>13000 LEDEN</p>
+        </section>
+        <p id="left">
+          AEGEE is een van Europa's grootste interdisciplinaire
+          studentenorganisaties, strevend naar een democratisch, divers en
+          grenzeloos Europa. AEGEE versterkt onderling begrip en brengt Europa
+          dichterbij voor jonge mensen.
+        </p>
+      </section>
+      <section id="bottom">
+        <section class="item">
+          <h1>AGORA & EPM</h1>
+          <Image src={europe1} alt="AGORA & EPM" />
+          <p>
+            Drie keer per jaar komen alle AEGEE locals samen ergens in Europa om
+            een week te beoordelen hoe dingen gaan, toekomstplannen te maken en,
+            natuurlijk, te feesten. Niet alleen is dit heel leuk, maar je maakt
+            ook veel vrienden door heel Europa heen op deze manier!
+          </p>
+        </section>
+        <section class="item">
+          <h1>SUMMER UNIVERSITIES</h1>
+          <Image src={europe2} alt="Summer Universities" />
+          <p>
+            Nee, Summer Universities zijn niet saai, en je hoeft er ook echt
+            niet te studeren. Het is een uitwisselingsprogramma waar je een
+            weekje ergens in Europa allemaal verschillende AEGEE leden ontmoet.
+            Er zijn allemaal verschillende SU's van historische tours door
+            landen tot hiken door de bergen tot echte drinkvakanties.
+          </p>
+        </section>
+        <section class="item">
+          <h1>AEGEE-PASSAU</h1>
+          <Image src={europe3} alt="AEGEE-Passau" />
+          <p>
+            AEGEE-Passau is een local op de Duits-Oostenrijkse grens. Maar ze
+            zijn niet zomaar een local, ze zijn namelijk onze Twin Local! Dit
+            betekent dat ze elk jaar naar ons kerstdiner komen met een
+            delegatie, en wij elk jaar naar hun boot feest. We hebben heel close
+            relaties met ze, en vinden het heel leuk als ze naar ons komen, en
+            zij als wij naar hun komen.
+          </p>
+        </section>
+      </section>
+    </section>
+  </ImageTextSection>
 
-<style lang="scss">
-  h1.first {
-    font-size: 9rem;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    align-self: flex-start;
-    color: white;
-    font-family: "Newsreader Variable", serif;
-    @media (max-width: 768px) {
-      font-size: 3rem;
+  <style lang="scss">
+    h1.first {
+      font-size: 9rem;
+      margin: 0;
+      text-align: right;
+      color: white;
+      font-family: "Newsreader Variable", serif;
+      padding-top: 67vh;
+      padding-right: 4vw;
+
+      @media (max-width: 768px) {
+        font-size: 3rem;
+      }
     }
-  }
-</style>
+
+    .fixUrself {
+      @media (max-width: 768px) {
+        background-position-x: -50vw;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+
+    .item {
+      padding: 1rem;
+      color: rgba(255, 255, 255, 0.75);
+
+      @media (min-width: 768px) {
+        width: 30%;
+      }
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+    }
+
+    #bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    #top {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+
+      p {
+        margin: 0;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.65);
+      }
+
+      #left {
+        border-top: 2px solid rgba(255, 255, 255, 0.65);
+      }
+    }
+  </style>
+</BaseLayout>

@@ -1,5 +1,6 @@
 ---
 import logoPaars from "../images/logoPaars.svg";
+import logoAvontuur from "../images/avontuurKlein.svg";
 import logoWit from "../images/logoWit.svg";
 import { Image } from "astro:assets";
 import "@fontsource/bebas-neue";
@@ -42,7 +43,7 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         <a href={lonk}>{otherLang}</a>
     </nav>
     <header>
-        <Image src={logoPaars} alt="Logo" width="200" loading="eager" />
+        <Image src={logoAvontuur} alt="Logo" width="150" loading="eager" />
     </header>
 </div>
 
@@ -101,6 +102,7 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         align-items: center;
         align-content: center;
         justify-content: space-evenly;
+        padding: 1rem;
     }
     nav {
         display: flex;
