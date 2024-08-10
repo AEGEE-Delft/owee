@@ -1,5 +1,4 @@
 ---
-import logoPaars from "../images/logoPaars.svg";
 import logoAvontuur from "../images/avontuurKlein.svg";
 import logoWit from "../images/logoWit.svg";
 import { Image } from "astro:assets";
@@ -122,11 +121,12 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         text-decoration: none;
         color: white;
         font-size: xx-large;
+        font-family: "Bebas Neue", sans-serif;
         @media (max-width: 768px) {
             font-size: x-large;
             width: 30%;
         }
-        font-family: "Bebas Neue", sans-serif;
+        
         @include stroke(1, rgba(34, 34, 34, 0.2));
     }
 
@@ -135,6 +135,7 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
             display: none;
         }
     }
+    
 </style>
 
 <script>

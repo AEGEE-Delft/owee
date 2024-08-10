@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from "astro:assets";
 import bg from "../images/travel_1.png";
 import bg2 from "../images/travel_2.png";
 import ImageTextSection from "../components/ImageTextSection.astro";
@@ -8,7 +7,7 @@ import "@fontsource-variable/newsreader";
 import "@fontsource-variable/newsreader/wght-italic.css";
 ---
 
-<BaseLayout title="Travel" bgImages={[bg, bg2]}>
+<BaseLayout title="Travel" preloadImages={[bg, bg2]}>
   <ImageTextSection image={bg}>
     <h1 class="first lower"><span class="i">Travel</span></h1>
   </ImageTextSection>

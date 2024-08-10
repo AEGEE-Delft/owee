@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "@fontsource-variable/newsreader/opsz-italic.css";
-import ImageTextSection from "../components/ImageTextSection.astro";
 ---
 
 <BaseLayout title="Info">
@@ -10,35 +9,63 @@ import ImageTextSection from "../components/ImageTextSection.astro";
         <section id="base">
             <section class="row">
                 <section class="item">
-                    <h2>Wat doet AEGEE?</h2>
-                    <p>Reizen, borrelen, algehele gezelligheid!</p>
+                    <h2>Wat is AEGEE?</h2>
+                    <p>
+                        We zijn een reis- en gezelligheidsvereniging. Dit
+                        betekent dat we naast zo'n vijf reizen per jaar ook elke
+                        week een borrel organiseren en heleboel andere
+                        activiteiten in en rond Delft!
+                    </p>
                 </section>
                 <section class="item">
-                    <h2>Hoe duur is het?</h2>
-                    <p>50 euro per jaar!</p>
+                    <h2>Wat voor reizen doen jullie?</h2>
+                    <p>
+                        We organiseren elk jaar zo'n vijf reizen. Bijvoorbeeld
+                        een treinreis naar Tsjechië of met auto's vanuit
+                        Budapest het prachtige Slovenië ontdekken. Naast grote
+                        reizen hebben we ook liftwedstrijden en weekendtrips.
+                    </p>
                 </section>
                 <section class="item">
-                    <h2>Wat krijg ik daar voor?</h2>
-                    <p>Vrienden voor het leven!</p>
+                    <h2>Wat voor activiteiten zijn er?</h2>
+                    <p>
+                        Naast onze reizen organiseren onze commissies ook heel
+                        veel grote en kleine activiteiten. Wekelijks wordt er
+                        een borrel georganiseerd, jaarlijks is er een kerstdiner
+                        en zijn er boottochten, creatieve avonden en nog veel
+                        meer!
+                    </p>
                 </section>
             </section>
             <section class="row">
                 <section class="item">
-                    <h2>Wat voor activiteiten zijn er?</h2>
-                    <p>Reizen, borrels, en heel veel commissie activiteiten!</p>
-                </section>
-                <section class="item">
-                    <h2>Waar kan ik me inschrijven?</h2>
+                    <h2>Hoeveel kost het?</h2>
                     <p>
-                        Op de inschrijf pagina! Klik <a
-                            href="https://aegee-delft.nl/lid-worden">hier</a>!
+                        Een lidmaatschap bij AEGEE voor een jaar kost 50 euro.
+                        Klinkt dat goed? Schrijf je dan <a
+                            href="https://aegee-delft.nl/lid-worden">hier</a
+                        > in!
                     </p>
                 </section>
                 <section class="item">
-                    <h2>Hebben jullie ook commissies?</h2>
+                    <h2>Wat krijg ik daarvoor?</h2>
                     <p>
-                        Jazeker! Alles van de borrels verzorgen tot reizen
-                        organiseren kan bij ons!
+                        AEGEE-Delft is dé plek om te genieten van vrije
+                        gezelligheid, nieuwe connecties te maken en vrienden
+                        voor het leven te vinden. Ook ontwikkel je jezelf door
+                        indrukwekkende evenementen en reizen te organiseren of
+                        mee te maken!
+                    </p>
+                </section>
+                <section class="item">
+                    <h2>Zijn er commissies en disputen?</h2>
+                    <p>
+                        Jazeker! We hebben voor iedereen een commissie of
+                        dispuut die ze ligt. Zo organiseert de ComPASS onze
+                        borrels, zet de KOOKT diners neer, bedenkt de EventsCom
+                        de beste activiteiten en zijn er nog veel meer. Ook
+                        hebben we rustige disputen die een band vormen, naar
+                        films gaan of boeken brespreken.
                     </p>
                 </section>
             </section>
@@ -50,13 +77,14 @@ import ImageTextSection from "../components/ImageTextSection.astro";
     h1.first {
         font-size: 9rem;
         padding-top: 10rem;
-        @media (min-width: 768px) {
-            padding: 10rem 0 0 30rem;
-        }
+
         width: 100%;
         align-self: flex-start;
         color: white;
         font-family: "Newsreader Variable", serif;
+        @media (min-width: 768px) {
+            padding: 10rem 0 0 30rem;
+        }
         @media (max-width: 768px) {
             font-size: 3rem;
         }
@@ -73,6 +101,7 @@ import ImageTextSection from "../components/ImageTextSection.astro";
             display: flex;
 
             justify-content: space-evenly;
+            align-items: center;
             hr {
                 margin: 0;
                 border: 1px solid white;

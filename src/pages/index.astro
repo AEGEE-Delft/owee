@@ -22,7 +22,7 @@ import PlanningEvent from "../components/PlanningEvent.astro";
 ---
 
 <BaseLayout>
-  <ImageImageSection image={bg} alt="Party" logo={logoWit} y={2} />
+  <ImageImageSection image={bg} logo={logoWit} />
   <section id="planning">
     <table class="flextable">
       <tbody>
@@ -53,8 +53,8 @@ import PlanningEvent from "../components/PlanningEvent.astro";
             imageSource={planning2}
             right={true}
           >
-            Kom lekker met leden praten om een beter beeld te krijgen bij wat we
-            allemaal doen en de sfeer te proeven!
+            Kom gezellig met leden praten om de sfeer te proeven en een beter
+            beeld te krijgen van wat we allemaal doen!
           </PlanningEvent>
           <PlanningEvent
             time="20:00"
@@ -63,8 +63,8 @@ import PlanningEvent from "../components/PlanningEvent.astro";
             imageSource={planning3}
             right={false}
           >
-            Zie AEGEE op een klassieke AEGEE manier: proef verschillende drankjes
-            uit Europa en eet wat interessante snackies.
+            Zie AEGEE op dé klassieke manier: proef verschillende drankjes en
+            snacks vanuit heel Europa!
           </PlanningEvent>
           <PlanningEvent
             time="21:00"
@@ -84,8 +84,8 @@ import PlanningEvent from "../components/PlanningEvent.astro";
             title="Pitch Imperfect Karaoke"
             imageSource={planning5}
           >
-            Kom samen met onze leden een leuke karaoke avond vieren. We zullen
-            verschillende nummers zingen en er een mooie avond van maken.
+            Kom samen met onze leden een leuke karaoke avond vieren. Vraag je
+            favoriete nummers aan en ga helemaal los!
           </PlanningEvent>
         </PlanningDay>
         <PlanningDay day="Woensdag" right={true}>
@@ -96,9 +96,8 @@ import PlanningEvent from "../components/PlanningEvent.astro";
             imageSource={planning6}
             right={true}
           >
-            We zullen te vinden zijn op het terrein achter X, daar kun je
-            aangeven waar je naartoe bent geweest deze zomer en lekker met ons
-            babbelen.
+            We zullen te vinden zijn op het terrein van X. Geef aan hoeveel van
+            Europa jij al gezien hebt en waar je het liefst nog eens heen wilt!
           </PlanningEvent>
           <PlanningEvent
             time="21:00"
@@ -120,9 +119,8 @@ import PlanningEvent from "../components/PlanningEvent.astro";
             right={true}
             imageSource={planning8}
           >
-            Op deze laatste avond is iedereen welkom. Als je lekker wil viben
-            met onze leden op een lowkey niveau onder genot van een heerlijke
-            BBQ is dit de avond om te komen.
+            Op deze laatste avond is iedereen welkom! Kom met onze leden
+            gezellig genieten van een relaxte sfeer en een heerlijke BBQ!
           </PlanningEvent>
         </PlanningDay>
       </tbody>
@@ -158,11 +156,11 @@ import PlanningEvent from "../components/PlanningEvent.astro";
     font-size: 3.5rem;
     color: white;
     font-family: "Newsreader Variable", serif;
+    text-align: left;
     .i {
       font-family: "Newsreader Variable", serif;
       font-style: italic;
     }
-    text-align: left;
   }
 
   tr {

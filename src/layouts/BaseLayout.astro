@@ -1,17 +1,17 @@
 ---
+import "@fontsource/open-sans";
+import type { ImageMetadata } from "astro";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 import BaseFooter from "../components/BaseFooter.astro";
 import BaseHead from "../components/BaseHead.astro";
-import "@fontsource/open-sans";
 import NavHeader from "../components/NavHeader.astro";
-import ViewTransitions from "astro/components/ViewTransitions.astro";
-import type { ImageMetadata } from "astro";
 
 interface Props {
     title?: string;
-    bgImages?: ImageMetadata[];
+    preloadImages?: ImageMetadata[];
 }
 
-const { title, bgImages = [] } = Astro.props;
+const { title, preloadImages = [] } = Astro.props;
 ---
 
 <html lang="en">
@@ -26,6 +26,11 @@ const { title, bgImages = [] } = Astro.props;
             href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
             rel="stylesheet"
         />
+        {
+            preloadImages.map((image) => (
+                <link rel="preload" href={image.src} as="image" />
+            ))
+        }
         <style is:global>
             * {
                 font-family: "Open Sans Variable", sans-serif;
@@ -66,6 +71,6 @@ const { title, bgImages = [] } = Astro.props;
         <main>
             <slot />
         </main>
-        <BaseFooter bgImages={bgImages} />
+        <BaseFooter />
     </body>
 </html>
