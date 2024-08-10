@@ -6,18 +6,19 @@ import "@fontsource/bebas-neue";
 
 interface Props {
     image: ImageMetadata;
-
     logo: ImageMetadata;
+    url: string;
+    text: string;
 }
 
-const { image, logo } = Astro.props;
+const { image, logo, url, text } = Astro.props;
 
 const newImg = await getImage({ src: image, width: 1920 });
 ---
 
 <section>
     <Image src={logo} width={1920} alt="Avontuur aan de horizon" />
-    <p><a href="https://aegee-delft.nl/lid-worden">Inschrijven?</a></p>
+    <p><a href={url}>{text}</a></p>
 </section>
 
 <style define:vars={{ imgSrc: `url(${newImg.src})` }} lang="scss">
@@ -42,20 +43,20 @@ const newImg = await getImage({ src: image, width: 1920 });
         height: auto;
     }
     p {
-        
         font-size: 3rem;
         color: white;
         text-align: center;
-        background: rgb(34, 193, 195);
-        background: linear-gradient(
-            0deg,
-            rgba(34, 193, 195, 1) 0%,
-            rgba(253, 187, 45, 1) 100%
-        );
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: 1rem;
+
         a {
+            background: rgb(34, 193, 195);
+            background: linear-gradient(
+                0deg,
+                rgba(34, 193, 195, 1) 0%,
+                rgba(253, 187, 45, 1) 100%
+            );
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 1rem;
             color: white;
             text-decoration: none;
             font-family: "Bebas Neue", sans-serif;
