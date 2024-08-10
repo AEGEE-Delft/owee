@@ -17,16 +17,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <ImageTextSection image={euBg}>
     <section>
       <section id="top">
-        <section>
+        <section id="details">
           <p>161 CITIES</p>
           <p>40 COUNTRIES</p>
           <p>13000 MEMBERS</p>
         </section>
         <p id="left">
-          AEGEE is one of Europe's biggest interdisciplinary student
+          AEGEE is one of Europe's largest interdisciplinary student
           organisations, striving for a democratic, diverse and borderless
           Europe. AEGEE strengthens mutual understanding and brings Europe
-          closer to young people.
+          closer for young people.
         </p>
       </section>
       <section id="bottom">
@@ -34,32 +34,33 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <h1>AGORA & EPM</h1>
           <Image src={europe1} alt="AGORA & EPM" />
           <p>
-            Three times a year all AEGEE-locals come together somewhere in
-            Europe for a week to discuss how things are going, make future plans
-            and, ofcourse, party every night. Not only is it very fun, you make
-            a lot of friends throughout all Europe this way.
+            Three times a year, all AEGEE locals gather somewhere in Europe to
+            spend a week reviewing progress, making future plans and of course,
+            party lavishly. That way, you can easily make friends and
+            connections with students all over Europe!
           </p>
         </section>
         <section class="item">
           <h1>SUMMER UNIVERSITIES</h1>
           <Image src={europe2} alt="Summer Universities" />
           <p>
-            No, summer universities are not boring and do not contain studying.
-            They are an exchange program where you travel somewhere for a week
-            and meet all kinds of AEGEE members. There are all kinds of SU’s
-            ranging from historical tours throuh countries to hikes across
-            mountains to drinking holidays.
+            Although it sounds like summer school, that is definitely not what
+            you should be thinking of think of with summer universities. It is
+            an exchange with other AEGEEs where you spend a week doing
+            activities with fellow students. Historical tours, hiking through
+            nature or partying hard, everything is possible at a summer
+            university!
           </p>
         </section>
         <section class="item">
           <h1>AEGEE-PASSAU</h1>
           <Image src={europe3} alt="AEGEE-Passau" />
           <p>
-            AEGEE-Passau is an AEGEE local on the Germany-Austria border. They
-            are very special to us since they are our twin-local. This means
-            that they attend our christmas dinner and we attend their boat
-            party. We have very close relations to them and we love visting them
-            and having them visit us.
+            AEGEE-Passau is a local on the German-Austrian border. But they are
+            not just any local, they are in fact our Twin Local! This means that
+            every year they come to our Christmas dinner with a delegation, and
+            we attend their Boat Party every year. We have very close
+            relationship with them, and always enjoy each other's company.
           </p>
         </section>
       </section>
@@ -121,6 +122,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     }
 
     #top {
+      padding-top: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -128,14 +130,33 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       color: white;
       font-size: 2rem;
 
+      @media (min-width: 768px) {
+        flex-direction: row;
+        margin: 0 20vw;
+      }
+
       p {
         margin: 0;
         font-weight: bold;
         color: rgba(255, 255, 255, 0.65);
       }
 
+      #details {
+        min-width: fit-content;
+        @media (min-width: 768px) {
+          margin-right: 2rem;
+          text-align: right;
+        }
+      }
+
       #left {
         border-top: 2px solid rgba(255, 255, 255, 0.65);
+        @media (min-width: 768px) {
+          border-top: none;
+          border-left: 2px solid rgba(255, 255, 255, 0.65);
+          padding-left: 2rem;
+          text-align: left;
+        }
       }
     }
   </style>

@@ -36,9 +36,9 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
     <nav>
         <a href={home}>Home</a>
         <a href={info}>Info</a>
-        <a href={travel}>Travel</a>
+        <a href={travel}>{currentLocale === "nl" ? "Reizen" : "Travel"}</a>
         <a href={gezelligheid}>Gezelligheid</a>
-        <a href={europe}>Europe</a>
+        <a href={europe}>{currentLocale === "nl" ? "Europa" : "Europe"}</a>
         <a href={lonk}>{otherLang}</a>
     </nav>
     <header>

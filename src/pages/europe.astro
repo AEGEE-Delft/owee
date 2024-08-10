@@ -12,18 +12,18 @@ import europe3 from "../images/europe_3.png";
 
 <BaseLayout title="Europe" preloadImages={[bg, euBg]}>
   <ImageTextSection image={bg} classNames={["fixUrself"]}>
-    <h1 class="first">Europe</h1>
+    <h1 class="first">Europa</h1>
   </ImageTextSection>
   <ImageTextSection image={euBg}>
     <section>
       <section id="top">
-        <section>
+        <section id="details">
           <p>161 STEDEN</p>
           <p>40 LANDEN</p>
           <p>13000 LEDEN</p>
         </section>
         <p id="left">
-          AEGEE is een van Europa's grootste interdisciplinaire
+          AEGEE is één van Europa's grootste interdisciplinaire
           studentenorganisaties, strevend naar een democratisch, divers en
           grenzeloos Europa. AEGEE versterkt onderling begrip en brengt Europa
           dichterbij voor jonge mensen.
@@ -34,21 +34,21 @@ import europe3 from "../images/europe_3.png";
           <h1>AGORA & EPM</h1>
           <Image src={europe1} alt="AGORA & EPM" />
           <p>
-            Drie keer per jaar komen alle AEGEE locals samen ergens in Europa om
-            een week te beoordelen hoe dingen gaan, toekomstplannen te maken en,
-            natuurlijk, te feesten. Niet alleen is dit heel leuk, maar je maakt
-            ook veel vrienden door heel Europa heen op deze manier!
+            Drie keer per jaar komen alle AEGEE locals ergens in Europa samen om
+            een week lang de vooruitgang te beoordelen, toekomstplannen te maken
+            en natuurlijk, uitbundig te feesten. Op die manier maak je makkelijk
+            vrienden en connecties met studenten door heel Europa!
           </p>
         </section>
         <section class="item">
           <h1>SUMMER UNIVERSITIES</h1>
           <Image src={europe2} alt="Summer Universities" />
           <p>
-            Nee, Summer Universities zijn niet saai, en je hoeft er ook echt
-            niet te studeren. Het is een uitwisselingsprogramma waar je een
-            weekje ergens in Europa allemaal verschillende AEGEE leden ontmoet.
-            Er zijn allemaal verschillende SU's van historische tours door
-            landen tot hiken door de bergen tot echte drinkvakanties.
+            Al klinkt het als zomerschool, is dat zeker niet waar je aan moet
+            denken bij summer universities. Het is een uitwisseling met andere
+            AEGEE's waar je een week lang activiteiten doet met medestudenten.
+            Historische tours, hiken door de natuur of flink feesten, alles is
+            mogelijk bij een Summer University!
           </p>
         </section>
         <section class="item">
@@ -58,9 +58,8 @@ import europe3 from "../images/europe_3.png";
             AEGEE-Passau is een local op de Duits-Oostenrijkse grens. Maar ze
             zijn niet zomaar een local, ze zijn namelijk onze Twin Local! Dit
             betekent dat ze elk jaar naar ons kerstdiner komen met een
-            delegatie, en wij elk jaar naar hun boot feest. We hebben heel close
-            relaties met ze, en vinden het heel leuk als ze naar ons komen, en
-            zij als wij naar hun komen.
+            delegatie, en wij elk jaar naar hun Boatparty. We hebben hele hechte
+            relatie met ze, en genieten altijd van mekaars gezelschap.
           </p>
         </section>
       </section>
@@ -122,6 +121,7 @@ import europe3 from "../images/europe_3.png";
     }
 
     #top {
+      padding-top: 2rem;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -129,14 +129,33 @@ import europe3 from "../images/europe_3.png";
       color: white;
       font-size: 2rem;
 
+      @media (min-width: 768px) {
+        flex-direction: row;
+        margin: 0 20vw;
+      }
+
       p {
         margin: 0;
         font-weight: bold;
         color: rgba(255, 255, 255, 0.65);
       }
 
+      #details {
+        min-width: fit-content;
+        @media (min-width: 768px) {
+          margin-right: 2rem;
+          text-align: right;
+        }
+      }
+
       #left {
         border-top: 2px solid rgba(255, 255, 255, 0.65);
+        @media (min-width: 768px) {
+          border-top: none;
+          border-left: 2px solid rgba(255, 255, 255, 0.65);
+          padding-left: 2rem;
+          text-align: left;
+        }
       }
     }
   </style>
