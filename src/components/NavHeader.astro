@@ -14,7 +14,7 @@ const currentPage = Astro.url.pathname.replace(/^\/en\//, "/");
 
 const lonk = getRelativeLocaleUrl(otherLocale, currentPage);
 
-const otherLang = otherLocale === "en" ? "English" : "Nederlands";
+const otherLang = otherLocale === "en" ? "🇬🇧 English" : "🇳🇱 Nederlands";
 
 const home = getRelativeLocaleUrl(currentLocale, "/");
 const info = getRelativeLocaleUrl(currentLocale, "/info");
@@ -39,6 +39,7 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         <a href={travel}>{currentLocale === "nl" ? "Reizen" : "Travel"}</a>
         <a href={gezelligheid}>Gezelligheid</a>
         <a href={europe}>{currentLocale === "nl" ? "Europa" : "Europe"}</a>
+        <a></a>
         <a href={lonk}>{otherLang}</a>
     </nav>
     <header>
