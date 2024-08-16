@@ -39,7 +39,7 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         <a href={travel}>{currentLocale === "nl" ? "Reizen" : "Travel"}</a>
         <a href={gezelligheid}>Gezelligheid</a>
         <a href={europe}>{currentLocale === "nl" ? "Europa" : "Europe"}</a>
-        <a></a>
+        <a class="gone"></a>
         <a href={lonk}>{otherLang}</a>
     </nav>
     <header>
@@ -129,6 +129,11 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         }
         
         @include stroke(1, rgba(34, 34, 34, 0.2));
+    }
+    .gone {
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     @media (max-width: 768px) {
