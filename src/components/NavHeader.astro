@@ -40,7 +40,7 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         <a href={gezelligheid}>Gezelligheid</a>
         <a href={europe}>{currentLocale === "nl" ? "Europa" : "Europe"}</a>
         <a class="gone"></a>
-        <a href={lonk}>{otherLang}</a>
+        <a class="langswitch" href={lonk}>{otherLang}</a>
     </nav>
     <header>
         <Image src={logoAvontuur} alt="Logo" width="150" loading="eager" />
@@ -126,19 +126,17 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         font-family: "Bebas Neue", sans-serif;
         @media (max-width: 768px) {
             font-size: x-large;
-            width: 30%;
+            width: 33%;
         }
         
         @include stroke(1, rgba(34, 34, 34, 0.2));
     }
-    .gone {
-        @media (max-width: 768px) {
-            display: none;
-        }
-    }
 
     @media (max-width: 768px) {
         #aegeelogo {
+            display: none;
+        }
+        .gone {
             display: none;
         }
     }
