@@ -6,23 +6,30 @@ import "@fontsource-variable/newsreader/wght-italic.css";
 import "@fontsource/bebas-neue";
 import ImageImageSection from "../../components/ImageImageSection.astro";
 import logoWit from "../../images/avontuurFancy.svg";
-import korayinger from "../../images/korayinger.jpg";
+
 import bg from "../../images/owee_front.png";
 
-import planning2 from "../../images/planning_2.png";
-import planning3 from "../../images/planning_3.png";
-import planning4 from "../../images/planning_4.png";
-import planning5 from "../../images/planning_5.png";
-import planning6 from "../../images/planning_6.png";
-import planning7 from "../../images/planning_7.png";
-import planning8 from "../../images/planning_8.png";
+let collection = await getCollection(
+  "planning",
+  ({ data }) => data.language === "en",
+);
+
+let sortedCollection = collection.sort((a, b) => {
+  return a.data.date - b.data.date;
+});
 
 import PlanningDay from "../../components/PlanningDay.astro";
 import PlanningEvent from "../../components/PlanningEvent.astro";
+import { getCollection } from "astro:content";
 ---
 
 <BaseLayout>
-  <ImageImageSection image={bg} logo={logoWit} url="https://aegee-delft.nl/en/lid-worden" text="Sign Up?"/>
+  <ImageImageSection
+    image={bg}
+    logo={logoWit}
+    url="https://aegee-delft.nl/en/lid-worden"
+    text="Sign Up?"
+  />
   <section id="planning">
     <table class="flextable">
       <tbody>
@@ -34,95 +41,25 @@ import PlanningEvent from "../../components/PlanningEvent.astro";
           </td>
           <td></td>
         </tr>
-        <PlanningDay day="Sunday" right={false}>
-          <PlanningEvent
-            time="18:00"
-            location="Parade Area"
-            title="Parade"
-            imageSource={korayinger}
-          >
-            Our purple procession is coming again and will give everyone a first
-            look at who we are.
-          </PlanningEvent>
-        </PlanningDay>
-        <PlanningDay day="Monday" right={true}>
-          <PlanningEvent
-            time="12:00"
-            location="MARKT PLEIN"
-            title="Infomarkt"
-            imageSource={planning2}
-            right={true}
-          >
-            Come and socialise with members to soak up the atmosphere and get a
-            better idea of what we are all about!
-          </PlanningEvent>
-          <PlanningEvent
-            time="20:00"
-            location="Broeder Lazarus"
-            title="Taste of Europe"
-            imageSource={planning3}
-            right={false}
-          >
-            See AEGEE the classic way: taste different drinks and snacks from
-            all over Europe!
-          </PlanningEvent>
-          <PlanningEvent
-            time="21:00"
-            location="Broeder Lazarus"
-            title="EUROPARTY"
-            imageSource={planning4}
-            right={true}
-          >
-            Join AEGEE-Delft in closing the second OWee day to the finest
-            European party songs at our Europarty.
-          </PlanningEvent>
-        </PlanningDay>
-        <PlanningDay day="Tuesday" right={false}>
-          <PlanningEvent
-            time="21:00"
-            location="Broeder Lazarus"
-            title="Pitch Imperfect Karaoke"
-            imageSource={planning5}
-          >
-            Join our members for a fun karaoke night. Request your favourite
-            songs and go wild!
-          </PlanningEvent>
-        </PlanningDay>
-        <PlanningDay day="Wednesday" right={true}>
-          <PlanningEvent
-            time="10:00"
-            location="X"
-            title="Activity Market"
-            imageSource={planning6}
-            right={true}
-          >
-            You can find us at X. Show us how much of Europe you have already
-            seen and where you would most like to go again!
-          </PlanningEvent>
-          <PlanningEvent
-            time="21:00"
-            location="Broeder Lazarus"
-            title="Glownight"
-            imageSource={planning7}
-            right={false}
-          >
-            Together with the other Dutch AEGEEs, we will make it a beautiful
-            closing party. Enjoy beautiful neon colours and good music from
-            different DJs!
-          </PlanningEvent>
-        </PlanningDay>
-        <PlanningDay day="Thursday" right={true}>
-          <PlanningEvent
-            time="18:00"
-            location="Tuin achter Kanaalweg 4"
-            title="WELKOM BBQ"
-            right={true}
-            imageSource={planning8}
-          >
-            On this last evening, everyone is welcome! Join our members for a
-            relaxing atmosphere and a delicious BBQ!
-          </PlanningEvent>
-        </PlanningDay>
+        {
+          sortedCollection
+            .map((a) => a.data)
+            .map((data, index) => (
+              <PlanningDay day={data.day} right={index % 2 == 1}>
+                {data.events.map((event, evtIdx) => (
+                  <PlanningEvent
+                    time={event.time}
+                    location={event.location}
+                    title={event.title}
+                    imageSource={event.image}
+                    right={(index + evtIdx) % 2 == 1}
+                  >
+                    {event.description}
+                  </PlanningEvent>
+                ))}
+              </PlanningDay>
+            ))
+        }
       </tbody>
     </table>
   </section>
@@ -156,11 +93,11 @@ import PlanningEvent from "../../components/PlanningEvent.astro";
     font-size: 3.5rem;
     color: white;
     font-family: "Newsreader Variable", serif;
+    text-align: left;
     .i {
       font-family: "Newsreader Variable", serif;
       font-style: italic;
     }
-    text-align: left;
   }
 
   tr {

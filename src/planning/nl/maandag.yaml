@@ -1,0 +1,19 @@
+day: Maandag
+date: 2025-08-18
+language: nl
+events:
+  - time: 12:00
+    location: Markt Plein
+    title: Infomarkt
+    image: ../../images/planning_2.png
+    description: Kom gezellig met leden praten om de sfeer te proeven en een beter beeld te krijgen van wat we allemaal doen!
+  - time: 20:00
+    location: "Broeder Lazarus"
+    title: Taste of Europe
+    image: ../../images/planning_3.png
+    description: "Zie AEGEE op dé klassieke manier: proef verschillende drankjes en snacks vanuit heel Europa!"
+  - time: 21:00
+    location: Broeder Lazarus
+    title: Europarty
+    image: ../../images/planning_4.png
+    description: Sluit samen met AEGEE-Delft de tweede OWee dag af op de mooiste Europese feestnummers bij onze Europarty.

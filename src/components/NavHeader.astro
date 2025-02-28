@@ -67,7 +67,9 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
     /// @param  {Color}   $color  - Stroke color
     /// @return {Style}           - text-shadow
     @mixin stroke($stroke, $color) {
-        text-shadow: stroke($stroke, $color);
+        & {
+            text-shadow: stroke($stroke, $color);
+        }
     }
 
     #holder {

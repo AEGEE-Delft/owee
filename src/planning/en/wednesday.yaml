@@ -1,0 +1,17 @@
+day: Woensdag
+date: 2025-08-20
+language: en
+events:
+  - time: 10:00
+    location: X
+    title: Activiteiten Markt
+    image: ../../images/planning_6.png
+    description: You can find us at X. Show us how much of Europe you have already
+            seen and where you would most like to go again!
+  - time: 21:00
+    location: Broeder Lazarus
+    title: Glownight
+    image: ../../images/planning_7.png
+    description: Together with the other Dutch AEGEEs, we will make it a beautiful
+            closing party. Enjoy beautiful neon colours and good music from
+            different DJs!

@@ -1,0 +1,9 @@
+day: Sunday
+date: 2025-08-17
+language: en
+events:
+  - title: Parade
+    time: 18:00
+    location: Parade Area
+    description:   Our purple procession is coming again and will give everyone a first look at who we are.
+    image: ../../images/korayinger.jpg

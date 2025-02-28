@@ -15,6 +15,7 @@
     "@fontsource/bebas-neue": "^5.0.20",
     "@fontsource/open-sans": "^5.0.28",
     "astro": "5.4.0",
+    "caniuse-lite": "^1.0.30001701",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
