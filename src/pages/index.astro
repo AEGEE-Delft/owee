@@ -8,13 +8,12 @@ import bg from "../images/owee_front.png";
 import logoWit from "../images/avontuurFancy.svg";
 import ImageImageSection from "../components/ImageImageSection.astro";
 
-let collection = await getCollection(
-  "planning",
-  ({ data }) => data.language === "nl",
+let collection = await getCollection("planning", ({ id }) =>
+  id.startsWith("nl/"),
 );
 
 let sortedCollection = collection.sort((a, b) => {
-  return a.data.date - b.data.date;
+  return new Date(a.data.date).getTime() - new Date(b.data.date).getTime();
 });
 
 import PlanningDay from "../components/PlanningDay.astro";

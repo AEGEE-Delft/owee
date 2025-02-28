@@ -9,18 +9,17 @@ import logoWit from "../../images/avontuurFancy.svg";
 
 import bg from "../../images/owee_front.png";
 
-let collection = await getCollection(
-  "planning",
-  ({ data }) => data.language === "en",
+let collection = await getCollection("planning", ({ id }) =>
+  id.startsWith("en/"),
 );
 
 let sortedCollection = collection.sort((a, b) => {
-  return a.data.date - b.data.date;
+  return new Date(a.data.date).getTime() - new Date(b.data.date).getTime();
 });
 
+import { getCollection } from "astro:content";
 import PlanningDay from "../../components/PlanningDay.astro";
 import PlanningEvent from "../../components/PlanningEvent.astro";
-import { getCollection } from "astro:content";
 ---
 
 <BaseLayout>

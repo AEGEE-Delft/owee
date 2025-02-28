@@ -22,3 +22,9 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+public/*.png
+public/*.ico
+public/*.svg
+public/*.json
+public/*.xml
+public/*.webmanifest
