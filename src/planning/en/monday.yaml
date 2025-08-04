@@ -2,18 +2,18 @@ day: Monday
 date: 2025-08-18
 language: en
 events:
-  - time: 12:00
+  - time: 13:00
     location: Markt Plein
     title: Infomarkt
     image: ../../images/planning_2.png
     description: Come and socialise with members to soak up the atmosphere and get a better idea of what we are all about!
-  - time: 20:00
-    location: "Broeder Lazarus"
-    title: Taste of Europe
-    image: ../../images/planning_3.png
-    description: "See AEGEE the classic way: taste different drinks and snacks from all over Europe!"
   - time: 21:00
+    location: "Broeder Lazarus"
+    title: EuroQuiz
+    image: ../../images/planning_3.png
+    description: "Discover AEGEE during a pub quiz the classic way: taste different drinks and snacks from all over Europe!"
+  - time: 22:00
     location: Broeder Lazarus
-    title: Europarty
+    title: EuroBorrel
     image: ../../images/planning_4.png
-    description: Join AEGEE-Delft in closing the second OWee day to the finest European party songs at our Europarty.
+    description: During this Social Drink you can discover AEGEE-Delft by talking to our members and asking all the questions you may have!
