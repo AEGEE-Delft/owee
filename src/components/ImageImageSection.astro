@@ -41,6 +41,7 @@ const newImg = await getImage({ src: image, width: 1920 });
     img {
         width: 100%;
         height: auto;
+        padding-top: 10em;
     }
     p {
         font-size: 3rem;
@@ -58,6 +59,10 @@ const newImg = await getImage({ src: image, width: 1920 });
             &:hover {
                 text-decoration: underline;
             }
+        }
+
+        @media (max-width: 768px) {
+            font-size: 2rem;
         }
     }
 </style>
