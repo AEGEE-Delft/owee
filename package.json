@@ -19,7 +19,7 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "astro-favicons": "^2.0.2",
+    "astro-favicons": "^3.1.6",
     "autoprefixer": "^10.4.19",
     "sass": "^1.77.6"
   }

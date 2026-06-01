@@ -28,3 +28,4 @@ public/*.svg
 public/*.json
 public/*.xml
 public/*.webmanifest
+!public/favicon.svg
