@@ -14,7 +14,7 @@ const currentPage = Astro.url.pathname.replace(/^\/en\//, "/");
 
 const lonk = getRelativeLocaleUrl(otherLocale, currentPage);
 
-const otherLang = otherLocale === "en" ? "🇬🇧 English" : "🇳🇱 Nederlands";
+const otherLang = otherLocale === "en" ? "English" : "Nederlands";
 
 const home = getRelativeLocaleUrl(currentLocale, "/");
 const info = getRelativeLocaleUrl(currentLocale, "/info");

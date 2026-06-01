@@ -12,7 +12,7 @@ events:
     title: EuroQuiz
     image: ../../images/planning_3.png
     description: "Ontdek AEGEE tijdens een pubquiz op dé klassieke manier: proef verschillende drankjes en snacks vanuit heel Europa!"
-  - time: 22:00
+  - time: 22:00 
     location: Broeder Lazarus
     title: EuroBorrel
     image: ../../images/planning_4.png
