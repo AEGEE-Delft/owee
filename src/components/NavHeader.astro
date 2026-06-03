@@ -16,11 +16,11 @@ const lonk = getRelativeLocaleUrl(otherLocale, currentPage);
 
 const otherLang = otherLocale === "en" ? "English" : "Nederlands";
 
-const home = getRelativeLocaleUrl(currentLocale, "/");
-const info = getRelativeLocaleUrl(currentLocale, "/info");
-const travel = getRelativeLocaleUrl(currentLocale, "/travel");
-const gezelligheid = getRelativeLocaleUrl(currentLocale, "/gezelligheid");
-const europe = getRelativeLocaleUrl(currentLocale, "/europe");
+// const home = getRelativeLocaleUrl(currentLocale, "/");
+// const info = getRelativeLocaleUrl(currentLocale, "/info");
+// const travel = getRelativeLocaleUrl(currentLocale, "/travel");
+// const gezelligheid = getRelativeLocaleUrl(currentLocale, "/gezelligheid");
+// const europe = getRelativeLocaleUrl(currentLocale, "/europe");
 ---
 
 <div id="holder">
@@ -34,16 +34,16 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
         />
     </header>
     <nav>
-        <a href={home}>Home</a>
+        <!-- <a href={home}>Home</a>
         <a href={info}>Info</a>
         <a href={travel}>{currentLocale === "nl" ? "Reizen" : "Travel"}</a>
         <a href={gezelligheid}>Gezelligheid</a>
-        <a href={europe}>{currentLocale === "nl" ? "Europa" : "Europe"}</a>
+        <a href={europe}>{currentLocale === "nl" ? "Europa" : "Europe"}</a> -->
         <a class="gone"></a>
-        <a class="langswitch" href={lonk}>{otherLang}</a>
     </nav>
     <header>
         <Image src={logoAvontuur} alt="Logo" width="150" loading="eager" />
+        <a class="langswitch" href={lonk}>{otherLang}</a>
     </header>
 </div>
 
@@ -139,6 +139,9 @@ const europe = getRelativeLocaleUrl(currentLocale, "/europe");
             display: none;
         }
         .gone {
+            display: none;
+        }
+        .langswitch {
             display: none;
         }
     }
