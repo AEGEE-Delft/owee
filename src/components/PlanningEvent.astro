@@ -14,6 +14,7 @@ interface Props {
 }
 
 const { time, location, title, imageSource, right = false } = Astro.props;
+const lines = title.split('\n');
 
 const alignment = right ? "right" : "left";
 
@@ -23,7 +24,13 @@ const classes = [alignment];
 <tr class:list={classes}>
     <td>
         <div class="content">
-            <h3>{title}</h3>
+            <h3>
+                {lines.map((line, i) => (
+                    <span>
+                        {line}{i < lines.length - 1 ? <br /> : null}
+                    </span>
+                ))}
+            </h3>
             <p>
                 <slot />
             </p>
