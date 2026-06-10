@@ -2,7 +2,8 @@
 import logoAvontuur from "../images/vreemden_naar_vrienden_logo.png";
 import logoWit from "../images/logoWit.svg";
 import { Image } from "astro:assets";
-import "@fontsource/bebas-neue";
+import "@fontsource-variable/newsreader";
+import "@fontsource/open-sans";
 
 import { getRelativeLocaleUrl } from "astro:i18n";
 
@@ -125,7 +126,7 @@ const otherLang = otherLocale === "en" ? "English" : "Nederlands";
         text-decoration: none;
         color: white;
         font-size: xx-large;
-        font-family: "Bebas Neue", sans-serif;
+        font-family: "Newsreader Variable", "Open Sans", sans-serif;
         @media (max-width: 768px) {
             font-size: x-large;
             width: 33%;

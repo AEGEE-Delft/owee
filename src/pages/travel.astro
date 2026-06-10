@@ -4,7 +4,7 @@ import bg from "../images/travel_1.png";
 import bg2 from "../images/travel_2.png";
 import ImageTextSection from "../components/ImageTextSection.astro";
 import "@fontsource-variable/newsreader";
-import "@fontsource-variable/newsreader/wght-italic.css";
+import "@fontsource/open-sans";
 ---
 
 <BaseLayout title="Travel" preloadImages={[bg, bg2]}>
@@ -83,14 +83,13 @@ import "@fontsource-variable/newsreader/wght-italic.css";
   h1.first {
     font-size: 9rem;
     color: white;
-    font-family: "Newsreader Variable", serif;
+    font-family: "Newsreader Variable", "Open Sans", sans-serif;
     margin: 0;
     @media (max-width: 768px) {
       font-size: 3rem;
     }
     .i {
-      font-family: "Newsreader Variable", serif;
-
+      font-family: "Newsreader Variable", "Open Sans", sans-serif;
       font-style: italic;
     }
   }

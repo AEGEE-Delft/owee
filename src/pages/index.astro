@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import "@fontsource/bebas-neue";
 import "@fontsource-variable/newsreader";
 import "@fontsource-variable/newsreader/wght-italic.css";
+import "@fontsource/open-sans";
 import bg from "../images/owee_front.png";
 import logoWit from "../images/vreemden_naar_vrienden_text.png";
 import ImageImageSection from "../components/ImageImageSection.astro";
@@ -90,10 +90,10 @@ import { getCollection } from "astro:content";
   h1 {
     font-size: 3.5rem;
     color: white;
-    font-family: "Newsreader Variable", serif;
+    font-family: "Newsreader Variable", "Open Sans", sans-serif;
     text-align: left;
     .i {
-      font-family: "Newsreader Variable", serif;
+      font-family: "Newsreader Variable", "Open Sans", sans-serif;
       font-style: italic;
     }
   }

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import "@fontsource-variable/newsreader/opsz-italic.css";
+import "@fontsource-variable/newsreader";
+import "@fontsource/open-sans";
 ---
 
 <BaseLayout title="Info">
@@ -81,7 +82,7 @@ import "@fontsource-variable/newsreader/opsz-italic.css";
         width: 100%;
         align-self: flex-start;
         color: white;
-        font-family: "Newsreader Variable", serif;
+        font-family: "Newsreader Variable", "Open Sans", sans-serif;
         @media (min-width: 768px) {
             padding: 10rem 0 0 30rem;
         }
