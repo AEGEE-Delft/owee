@@ -23,15 +23,16 @@ import logoWit from "../images/logoWit.svg";
     </div>
 
     <div class="logo">
-        <Image src={logoWit} alt="AEGEE-Delft logo" width="100" />
+        <Image src={logoWit} alt="AEGEE-Delft logo" width="150" />
     </div>
 </footer>
 
-<style lang="scss">
+<style lang="scss">s
     footer {
         background-color: #70086e;
         margin: 0;
-        padding: 0;
+        padding: 1rem clamp(2rem, 6vw, 6rem);
+        padding-left: 0.75rem;
         padding-right: clamp(6rem, 12vw, 10rem);
         width: 100%;
         height: fit-content;
@@ -40,16 +41,17 @@ import logoWit from "../images/logoWit.svg";
         display: flex;
         color: white;
         justify-content: flex-start;
+        align-items: flex-start;
         gap: 2rem;
     }
     footer a { color: inherit;}
     div {
-        flex: 1;
+        flex: 0 0 auto;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-        margin-top: 1vmin;
+        margin-top: 0;
         text-align: left;
         p {
             margin: 0;
@@ -62,13 +64,13 @@ import logoWit from "../images/logoWit.svg";
         font-size: x-large;
     }
     .switch {
-        padding: 1vmin;
+        padding: 0;
     }
     .logo {
         position: absolute;
-        top: 50%;
+        top: 1rem;
         right: 1rem;
-        transform: translateY(-50%);
+        transform: none;
         flex: 0 0 auto;
         align-items: center;
         justify-content: center;
