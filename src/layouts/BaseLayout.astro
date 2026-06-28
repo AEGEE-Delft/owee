@@ -33,6 +33,11 @@ const { title, preloadImages = [] } = Astro.props;
         <style is:global>
             * {
                 font-family: "Newsreader Variable", "Open Sans", sans-serif;
+                font-weight: 700 !important;
+            }
+            *::before,
+            *::after {
+                font-weight: 700 !important;
             }
             html,
             body {

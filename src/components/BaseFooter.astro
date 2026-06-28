@@ -16,30 +16,13 @@ import logoWit from "../images/logoWit.svg";
         </div>
     </div>
     <div>
-        <p class="l">Socials</p>
+        <p class="l">Linktree</p>
         <div>
-            <p><a href="https://www.instagram.com/owee_aegeedelft/" target="_blank" rel="noopener noreferrer">AEGEE Owee Instagram</a></p>
-            <p><a href="https://www.instagram.com/aegeedelft/" target="_blank" rel="noopener noreferrer">AEGEE Instagram</a></p>
-            <p><a href="https://www.tiktok.com/@aegeedelft" target="_blank" rel="noopener noreferrer">AEGEE Tiktok</a></p>
+            <p><a href="https://linktr.ee/owee.aegeedelft">See links here</a></p>
         </div>
     </div>
-    <div>
-        <p class="l">phone number</p>
-        <div>
-            <p><a href="tel:+31611859994">+31 6 12345678</a> WIP</p>
-        </div>
-    </div>
-    <div>
-    </div> <!--sorry, ik moest snel iets beunen-->
-    <div>
-    </div>
-    <div>
-    </div>
-    <div>
-    </div>
-    <div>
-    </div>
-    <div>
+
+    <div class="logo">
         <Image src={logoWit} alt="AEGEE-Delft logo" width="100" />
     </div>
 </footer>
@@ -49,11 +32,15 @@ import logoWit from "../images/logoWit.svg";
         background-color: #70086e;
         margin: 0;
         padding: 0;
+        padding-right: clamp(6rem, 12vw, 10rem);
         width: 100%;
         height: fit-content;
+        position: relative;
+        overflow: visible;
         display: flex;
         color: white;
-        justify-content: space-around;
+        justify-content: flex-start;
+        gap: 2rem;
     }
     footer a { color: inherit;}
     div {
@@ -76,5 +63,16 @@ import logoWit from "../images/logoWit.svg";
     }
     .switch {
         padding: 1vmin;
+    }
+    .logo {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        pointer-events: none;
     }
 </style>
