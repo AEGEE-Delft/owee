@@ -14,7 +14,7 @@ let collection = await getCollection("planning", ({ id }) =>
 let sortedCollection = collection.sort((a, b) => {
   return new Date(a.data.date).getTime() - new Date(b.data.date).getTime();
 });
-0
+
 import { getCollection } from "astro:content";
 import PlanningDay from "../../components/PlanningDay.astro";
 import PlanningEvent from "../../components/PlanningEvent.astro";
