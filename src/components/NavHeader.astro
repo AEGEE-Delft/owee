@@ -95,8 +95,10 @@ const otherLang = otherLocale === "en" ? "EN" : "NL";
         }
 
         @media (max-width: 768px) {
-            flex-direction: column-reverse;
-            position: absolute;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            position: fixed;
             border-bottom: none;
         }
     }
@@ -117,8 +119,7 @@ const otherLang = otherLocale === "en" ? "EN" : "NL";
         flex-wrap: wrap;
         flex-grow: 100;
         @media (max-width: 768px) {
-            text-align: center;
-            width: 100%;
+            display: none;
         }
     }
 
@@ -137,13 +138,17 @@ const otherLang = otherLocale === "en" ? "EN" : "NL";
 
     @media (max-width: 768px) {
         #aegeelogo {
-            display: none;
+            display: block;
+            width: 120px;
+            height: auto;
         }
         .gone {
             display: none;
         }
         .langswitch {
-            display: none;
+            display: inline-flex;
+            font-size: large;
+            white-space: nowrap;
         }
     }
     
